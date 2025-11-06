@@ -20,14 +20,13 @@ body {
 .navbar .nav-link:hover { color: var(--brand-accent-2) !important; }
 
 .hero {
-  position: relative;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop") center/cover no-repeat;
   color: #fff;
   padding: 96px 0;
-  overflow: hidden;
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
 }
+
 .hero::after{
   content: "";
   position:absolute; inset:-20% -10% auto auto; height:380px; width:380px; border-radius:50%;
