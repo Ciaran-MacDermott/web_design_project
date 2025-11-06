@@ -1,1 +1,79 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* Hero Section */
+.hero {
+    background: #343a40;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero .btn {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Features Section */
+#about .border {
+    border: 2px solid #343a40 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styles */
+.card {
+    border: 2px solid #343a40;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Buttons inside cards */
+.card .btn {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
