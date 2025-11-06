@@ -1,5 +1,3 @@
-
-/* style.css */
 :root{
   --brand-dark:#0b3d2e;
   --brand:#14532d;
@@ -15,43 +13,67 @@ body {
   color: #0b1324;
 }
 
+/* Navbar */
 .navbar { box-shadow: 0 6px 24px rgba(2,6,23,.12); }
 .navbar .nav-link { font-weight: 600; }
 .navbar .nav-link:hover { color: var(--brand-accent-2) !important; }
 
+/* HERO with layered background + contrast overlay */
 .hero {
-  background: url("images.jpeg") center/cover no-repeat;
+  position: relative;
+  isolation: isolate;             /* ensures overlay stacks above bg */
   color: #fff;
   padding: 96px 0;
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
+  overflow: hidden;
 }
-
-.hero::after{
+/* background image layer */
+.hero .hero__bg{
+  position: absolute; inset: 0; z-index: -2;
+  background: url("images.jpeg") center/cover no-repeat;
+}
+/* dark gradient overlay for readability */
+.hero::before{
   content: "";
-  position:absolute; inset:-20% -10% auto auto; height:380px; width:380px; border-radius:50%;
-  background: radial-gradient(closest-side, rgba(34,197,94,.35), transparent 70%);
-  filter: blur(6px);
-  transform: translate(20%, -10%);
-  pointer-events:none;
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35) 40%, rgba(0,0,0,.25));
 }
-.hero h1{ font-weight:800; letter-spacing:.3px; }
-.hero p.lead{ opacity:.95; }
+/* optional accent glow (removed your previous ::after orb) */
+.text-shadow { text-shadow: 0 2px 8px rgba(0,0,0,.55); }
 
+.hero h1{ font-weight:800; letter-spacing:.3px; }
+.hero p.lead{ opacity:.98; }
+
+/* Buttons */
 .btn-gradient{
   background-image: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-2));
-  border: 0; color:#fff; font-weight:800;
+  border: 0;
+  color:#0b1324;                  /* dark text for contrast */
+  font-weight:800;
   box-shadow: 0 8px 24px rgba(34, 197, 94, .35);
 }
 .btn-gradient:hover{ filter: brightness(1.05); box-shadow: 0 10px 28px rgba(163, 230, 53, .35); }
 
+/* Stat pills (no more white text on white) */
 .stat-pill{
-  background:#ffffff; border:2px solid #14532d; border-radius:999px; padding:.75rem 1.25rem; font-weight:700; display:inline-flex; align-items:center; gap:.5rem;
-  box-shadow:0 8px 20px rgba(2,6,23,.08);
+  background: rgba(255,255,255,.92);
+  color:#0b1324;
+  border:2px solid rgba(255,255,255,.92);
+  border-radius:999px;
+  padding:.65rem 1rem;
+  font-weight:700;
+  display:inline-flex; align-items:center; gap:.5rem;
+  box-shadow:0 6px 16px rgba(0,0,0,.18);
+  backdrop-filter: blur(2px);
 }
+.stat-pill i{ opacity:.9; }
 
+/* Features */
 #about .feature{
-  border:2px solid #14532d; border-radius:16px; background:#fff;
+  border:1.5px solid rgba(20,83,45,.35);
+  border-radius:16px;
+  background:#fff;
   transition: transform .25s ease, box-shadow .25s ease;
 }
 #about .feature:hover{
@@ -59,13 +81,20 @@ body {
   box-shadow:0 12px 24px rgba(2, 6, 23, .12);
 }
 
-.card{ border:2px solid #14532d; border-radius:16px; transition: transform .25s, box-shadow .25s; }
+/* Cards */
+.card{
+  border:1.5px solid rgba(20,83,45,.35);
+  border-radius:16px;
+  transition: transform .25s, box-shadow .25s;
+}
 .card:hover{ transform: translateY(-8px); box-shadow: 0 12px 28px rgba(2,6,23,.12); }
 .card-title{ font-weight:700; }
 
+/* Footer */
 footer a{ text-decoration:none; }
 footer a:hover{ text-decoration:underline; }
 
+/* Responsive */
 @media (max-width: 768px){
   .hero{ padding: 72px 0; }
   .hero h1{ font-size: 2rem; }
