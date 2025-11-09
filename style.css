@@ -21,8 +21,31 @@ body.bg-body{ background: var(--bg-page); color: var(--text); }
 .object-cover{ object-fit: cover; }
 
 /* Header / Nav */
-.site-header{ background:#fff; }
-.logo-box{ width:28px; height:28px; border-radius:6px; background:#e9ecef; }
+.site-header{ background:lightgray; }
+
+/* Logo container */
+.logo-box {
+  width: 55px;            /* controls total logo area */
+  height: 55px;
+  border-radius: 8px;
+  overflow: hidden;        /* hides anything spilling out */
+  background: #f9f9f9;     /* subtle background */
+}
+
+/* Logo image itself */
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* or 'contain' if your logo has text */
+}
+
+/* Optional: make logo smaller on mobile */
+@media (max-width: 768px) {
+  .logo-box {
+    width: 45px;
+    height: 45px;
+  }
+}
 
 .nav-pill{
   border-radius: var(--radius-pill);
