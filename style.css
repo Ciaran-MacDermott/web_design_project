@@ -2,7 +2,7 @@
 :root{
   --bg-page: #f5f5f5;
   --text: #333;
-  --border-hard: #222;           /* hard visible borders */
+  --border-hard: gray;           /* hard visible borders */
   --shadow: 0 3px 12px rgba(0,0,0,.06);
   --radius-m: 12px;
   --radius-pill: 999px;
