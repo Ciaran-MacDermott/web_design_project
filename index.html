@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wireframe Homepage</title>
+    <title>Emerald Roots Home</title>
 
-    <!-- Bootstrap 5 CDN -->
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-body">
-    <div class="app-frame mx-auto my-3 my-md-4 shadow-sm">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-md py-3">
-        <div class="container-fluid px-0">
-          <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+
+  <body class="bg-body text-center">
+    <!-- HEADER / NAV -->
+    <header class="site-header border-bottom soft-shadow py-2 py-md-3">
+      <nav class="navbar navbar-expand-md" aria-label="Primary">
+        <div class="container-xxl d-flex justify-content-between align-items-center">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
             <span class="logo-box" aria-hidden="true"></span>
             <span>Project Title</span>
           </a>
@@ -37,92 +37,80 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-            <ul class="navbar-nav align-items-md-center gap-md-2">
+          <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="mainNav">
+            <ul class="navbar-nav gap-2 gap-md-3">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link nav-pill active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about_us.html">About Us</a>
+                <a class="nav-link nav-pill" href="about_us.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="activities.html">Activities</a>
+                <a class="nav-link nav-pill" href="activities.html">Activities</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="get_involved.html">Get Involved</a>
+                <a class="nav-link nav-pill" href="get_involved.html">Get Involved</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="our_mission.html">Our Mission</a>
+                <a class="nav-link nav-pill" href="our_mission.html">Our Mission</a>
               </li>
             </ul>
-            <a class="btn btn-book ms-md-3 mt-3 mt-md-0" href="#">Book</a>
           </div>
         </div>
       </nav>
+    </header>
 
-      <!-- Hero Section -->
-      <section class="hero-visual mb-4 rounded-4 shadow-sm d-flex align-items-center justify-content-center">
-        <div class="hero-placeholder text-center text-muted">
-          <p class="mb-0">Hero Image / Placeholder</p>
-          <small>Lorem ipsum dolor sit amet.</small>
-        </div>
-      </section>
+    <!-- HERO -->
+    <section id="hero" class="py-5 bg-white border-bottom soft-shadow">
+      <div class="container-xxl">
+        <h1 class="mb-3 hero-title">Lorem Ipsum Dolor Sit Amet</h1>
 
-      <!-- Headline, image, & CTA -->
-      <section class="mb-5 shadow-sm p-3 rounded-4 bg-white text-center">
-        <h1 class="h3 mb-3">Lorem Ipsum Dolor Sit Amet</h1>
+        <!-- responsive placeholder image above CTA -->
+        <div class="cta-image-box mx-auto mb-3" role="img" aria-label="Placeholder image"></div>
 
-        <!-- Centered image box ABOVE the CTA -->
-        <div class="cta-image-box mx-auto mb-3" aria-hidden="true"></div>
-
-        <p class="text-body-secondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec
-          orci ut nisi pulvinar porttitor.
+        <p class="lead mx-auto hero-lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tortor
+          eget sapien malesuada bibendum sit amet a elit.
         </p>
-        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3">
-          Call to Action
-        </a>
-      </section>
 
-      <!-- Placeholder Content Sections -->
-      <section class="mb-5">
-        <h2 class="section-title h5 mb-3">Lorem Ipsum Sections</h2>
-        <div class="row g-3">
-          <div class="col-12 col-md-6">
-            <div class="wire-box rounded-4 p-3 h-100 shadow-sm bg-white">
-              <p class="mb-0 text-muted small">
-                Placeholder content block – lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="wire-box rounded-4 p-3 h-100 shadow-sm bg-white">
-              <p class="mb-0 text-muted small">
-                Placeholder content block – sed do eiusmod tempor incididunt.
-              </p>
-            </div>
-          </div>
+        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3">Call to Action</a>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="py-5 bg-white soft-shadow">
+      <div class="container-xxl">
+        <h2 class="h4 mb-4">Lorem Ipsum Section</h2>
+
+        <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 rounded-4 border bg-light-subtle">
+          <p class="text-muted mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus sed
+            lorem tristique sodales. Praesent nec orci sit amet lorem bibendum rhoncus
+            sit amet nec arcu. Curabitur cursus placerat justo, non feugiat augue interdum at.
+          </p>
         </div>
-      </section>
+      </div>
+    </main>
 
-      <!-- Social Banner (centered) -->
-      <section
-        class="social-strip mt-auto mb-3 rounded-4 d-flex flex-column align-items-center justify-content-center gap-2 text-center shadow-sm"
-      >
-        <span class="fw-semibold">Follow Us</span>
-        <div class="d-flex justify-content-center gap-2 flex-wrap">
+    <!-- SOCIAL LINKS -->
+    <section id="social-links" class="py-4 bg-white border-top soft-shadow">
+      <div class="container-xxl">
+        <h3 class="h6 fw-semibold mb-3">Follow Us</h3>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
           <a href="#" class="social-link">Facebook</a>
           <a href="#" class="social-link">LinkedIn</a>
           <a href="#" class="social-link">Instagram</a>
           <a href="#" class="social-link">X</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Footer (centered) -->
-      <footer class="py-3 text-center text-muted small">
-        © 2025 Project Title. All rights reserved.
-      </footer>
-    </div>
+    <!-- FOOTER -->
+    <footer class="site-footer py-3 text-muted border-top soft-shadow">
+      <div class="container-xxl">
+        <small>© 2025 Project Title. All rights reserved.</small>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -131,5 +119,4 @@
     ></script>
   </body>
 </html>
-
 
