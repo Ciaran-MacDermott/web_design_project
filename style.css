@@ -4,7 +4,7 @@
   --text: #333;
   --border-hard: rgba(0,0,0,.2);            /* ~50% opacity (softened) */
   --shadow: 0 3px 12px rgba(0,0,0,.1);
-  --radius-m: 12px;
+  --radius-m: 16px;
   --radius-pill: 999px;
 
   --hero-measure: 70ch;
@@ -57,7 +57,7 @@ body.bg-body{ background: var(--bg-page); color: var(--text); }
 .nav-pill:hover,
 .nav-pill.active{ background:#111; color:#fff !important; }
 
-/* Page Wrapper container*/
+/* Page Wrapper section*/
 /* ----- Page Wrapper ----- */
 #page-wrapper {
   max-width: 1400px;              /* keeps content centered and readable */
