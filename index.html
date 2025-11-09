@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Emerald Roots Home</title>
+    <title>Emerald Roots Template</title>
 
     <!-- Bootstrap 5 -->
     <link
@@ -17,11 +17,11 @@
 
   <body class="bg-body text-center">
     <!-- HEADER / NAV -->
-    <header class="site-header border-bottom soft-shadow py-2 py-md-3">
+    <header class="site-header border-all soft-shadow py-2 py-md-3">
       <nav class="navbar navbar-expand-md" aria-label="Primary">
         <div class="container-xxl d-flex justify-content-between align-items-center">
           <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <span class="logo-box" aria-hidden="true"></span>
+            <span class="logo-box border-all" aria-hidden="true"></span>
             <span>Project Title</span>
           </a>
 
@@ -39,21 +39,11 @@
 
           <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="mainNav">
             <ul class="navbar-nav gap-2 gap-md-3">
-              <li class="nav-item">
-                <a class="nav-link nav-pill active" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link nav-pill" href="about_us.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link nav-pill" href="activities.html">Activities</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link nav-pill" href="get_involved.html">Get Involved</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link nav-pill" href="our_mission.html">Our Mission</a>
-              </li>
+              <li class="nav-item"><a class="nav-link nav-pill border-all active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill border-all" href="about_us.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill border-all" href="activities.html">Activities</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill border-all" href="get_involved.html">Get Involved</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill border-all" href="our_mission.html">Our Mission</a></li>
             </ul>
           </div>
         </div>
@@ -61,52 +51,72 @@
     </header>
 
     <!-- HERO -->
-    <section id="hero" class="py-5 bg-white border-bottom soft-shadow">
+    <section id="hero" class="py-5 bg-white border-all soft-shadow">
       <div class="container-xxl">
         <h1 class="mb-3 hero-title">Lorem Ipsum Dolor Sit Amet</h1>
 
-        <!-- responsive placeholder image above CTA -->
-        <div class="cta-image-box mx-auto mb-3" role="img" aria-label="Placeholder image"></div>
+        <!-- Image ABOVE CTA (forest/organic vibe) -->
+        <figure class="mx-auto mb-3 hero-figure border-all overflow-hidden">
+          <img
+            src="https://source.unsplash.com/featured/800x400/?forest,trees,nature"
+            alt="Forest placeholder"
+            class="w-100 h-100 object-cover"
+          />
+        </figure>
 
         <p class="lead mx-auto hero-lead">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tortor
           eget sapien malesuada bibendum sit amet a elit.
         </p>
 
-        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3">Call to Action</a>
+        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3 border-all">Call to Action</a>
       </div>
     </section>
 
     <!-- MAIN CONTENT -->
-    <main id="main-content" class="py-5 bg-white soft-shadow">
+    <main id="main-content" class="py-5 bg-white border-all soft-shadow">
       <div class="container-xxl">
         <h2 class="h4 mb-4">Lorem Ipsum Section</h2>
 
-        <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 rounded-4 border bg-light-subtle">
-          <p class="text-muted mb-0">
+        <!-- Single centered block with hard border -->
+        <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 rounded-4 bg-light-subtle border-all">
+          <p class="text-muted mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus sed
             lorem tristique sodales. Praesent nec orci sit amet lorem bibendum rhoncus
             sit amet nec arcu. Curabitur cursus placerat justo, non feugiat augue interdum at.
           </p>
+
+          <!-- Secondary illustrative image (organic) -->
+          <div class="row justify-content-center g-3">
+            <div class="col-12 col-md-10 col-lg-8">
+              <figure class="ratio ratio-16x9 border-all overflow-hidden rounded-3">
+                <img
+                  src="https://source.unsplash.com/featured/1200x675/?organic,farm,vegetables"
+                  alt="Organic farming placeholder"
+                  class="w-100 h-100 object-cover"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- SOCIAL LINKS -->
-    <section id="social-links" class="py-4 bg-white border-top soft-shadow">
+    <section id="social-links" class="py-4 bg-white border-all soft-shadow">
       <div class="container-xxl">
         <h3 class="h6 fw-semibold mb-3">Follow Us</h3>
         <div class="d-flex justify-content-center flex-wrap gap-2">
-          <a href="#" class="social-link">Facebook</a>
-          <a href="#" class="social-link">LinkedIn</a>
-          <a href="#" class="social-link">Instagram</a>
-          <a href="#" class="social-link">X</a>
+          <a href="#" class="social-link border-all">Facebook</a>
+          <a href="#" class="social-link border-all">LinkedIn</a>
+          <a href="#" class="social-link border-all">Instagram</a>
+          <a href="#" class="social-link border-all">X</a>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="site-footer py-3 text-muted border-top soft-shadow">
+    <footer class="site-footer py-3 text-muted border-all soft-shadow">
       <div class="container-xxl">
         <small>© 2025 Project Title. All rights reserved.</small>
       </div>
@@ -119,4 +129,3 @@
     ></script>
   </body>
 </html>
-
