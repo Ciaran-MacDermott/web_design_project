@@ -1,148 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Regenerative Forestry Initiative</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wireframe Homepage</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-body">
+    <div class="app-frame mx-auto my-3 my-md-4 shadow-sm">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md py-3">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+            <span class="logo-box" aria-hidden="true"></span>
+            <span>Project Title</span>
+          </a>
 
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home"><i class="fa-solid fa-tree"></i> ReForest</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Approach</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero" id="home" role="banner" aria-label="Hero">
-    <!-- Background image layer -->
-    <div class="hero__bg" aria-hidden="true"></div>
-    <!-- Dark overlay is added via CSS ::before -->
-    <div class="container text-center position-relative">
-      <h1 class="display-4 mb-3 text-shadow">Regenerating forests, restoring futures.</h1>
-      <p class="lead mb-4 text-shadow">
-        We design, fund, and monitor regenerative forestry projects—boosting native biodiversity, soil health,
-        community livelihoods, and long-term carbon gains.
-      </p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
-        <span class="stat-pill"><i class="fa-solid fa-seedling"></i><span>2M+ native trees</span></span>
-        <span class="stat-pill"><i class="fa-solid fa-earth-europe"></i><span>15,000 ha restored</span></span>
-        <span class="stat-pill"><i class="fa-solid fa-cloud"></i><span>MRV-ready carbon</span></span>
-      </div>
-      <a href="#services" class="btn btn-gradient btn-lg px-4" aria-label="Jump to Programs">See Programs</a>
-    </div>
-  </header>
-
-  <!-- Approach / Features -->
-  <section class="container my-5" id="about" aria-label="Our regenerative approach">
-    <div class="row g-4 text-center">
-      <div class="col-md-4">
-        <div class="feature p-4 h-100">
-          <i class="fas fa-seedling fa-3x mb-3 text-success" aria-hidden="true"></i>
-          <h3 class="h5">Biodiversity-first</h3>
-          <p class="mb-0">Site-specific native mixes, assisted natural regeneration, and wildlife corridors that repair ecosystem function.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature p-4 h-100">
-          <i class="fas fa-water fa-3x mb-3 text-primary" aria-hidden="true"></i>
-          <h3 class="h5">Soil & Water Health</h3>
-          <p class="mb-0">Contour planting, mulching, and riparian buffers to rebuild soils, increase infiltration, and reduce erosion.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature p-4 h-100">
-          <i class="fas fa-hand-holding-heart fa-3x mb-3 text-danger" aria-hidden="true"></i>
-          <h3 class="h5">Communities & Jobs</h3>
-          <p class="mb-0">Fair local employment, smallholder inclusion, and stewardship training for durable, shared benefits.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programs / Services -->
-  <section class="container my-5" id="services" aria-label="Programs">
-    <h2 class="text-center mb-4">Programs</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1200&auto=format&fit=crop"
-               class="card-img-top" alt="Native forest canopy from above" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Native Reforestation</h5>
-            <p class="card-text">From degraded pasture to complex native forest using assisted natural regeneration and enrichment planting.</p>
-            <a href="#contact" class="btn btn-outline-dark mt-auto" aria-label="Learn more about Native Reforestation">Learn More</a>
+          <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav align-items-md-center gap-md-2">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about_us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="activities.html">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="get_involved.html">Get Involved</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="our_mission.html">Our Mission</a>
+              </li>
+            </ul>
+            <a class="btn btn-book ms-md-3 mt-3 mt-md-0" href="#">Book</a>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1615814691468-9c3976d6e1c3?q=80&w=1200&auto=format&fit=crop"
-               class="card-img-top" alt="Agroforestry rows with crops and trees" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Agroforestry Design</h5>
-            <p class="card-text">Diversified, climate-smart systems that blend timber, fruit, and fuelwood with food crops and pollinator habitat.</p>
-            <a href="#contact" class="btn btn-outline-dark mt-auto" aria-label="Explore Agroforestry Design">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop"
-               class="card-img-top" alt="Satellite imagery and analytics on a laptop" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">MRV & Carbon Accounting</h5>
-            <p class="card-text">Remote sensing, permanent plots, and open dashboards to track biomass, biodiversity, and co-benefits.</p>
-            <a href="#contact" class="btn btn-outline-dark mt-auto" aria-label="Details on MRV and Carbon Accounting">Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </nav>
 
-  <!-- Contact / Footer -->
-  <footer class="bg-dark text-white text-center py-5 mt-5" id="contact">
-    <div class="container">
-      <h2 class="h4 mb-3">Partner with us</h2>
-      <p class="mb-4">&copy; 2025 ReForest. Regenerative forestry for climate, nature, and people.</p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap mb-3">
-        <a class="text-white" href="mailto:hello@reforest.org" aria-label="Email">
-          <i class="fa-solid fa-envelope"></i> hello@reforest.org
+      <!-- Hero Section -->
+      <section class="hero-visual mb-4 rounded-4 shadow-sm d-flex align-items-center justify-content-center">
+        <div class="hero-placeholder text-center text-muted">
+          <p class="mb-0">Hero Image / Placeholder</p>
+          <small>Lorem ipsum dolor sit amet.</small>
+        </div>
+      </section>
+
+      <!-- Headline, image, & CTA -->
+      <section class="mb-5 shadow-sm p-3 rounded-4 bg-white text-center">
+        <h1 class="h3 mb-3">Lorem Ipsum Dolor Sit Amet</h1>
+
+        <!-- Centered image box ABOVE the CTA -->
+        <div class="cta-image-box mx-auto mb-3" aria-hidden="true"></div>
+
+        <p class="text-body-secondary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec
+          orci ut nisi pulvinar porttitor.
+        </p>
+        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3">
+          Call to Action
         </a>
-      </div>
-      <div class="d-flex justify-content-center gap-3">
-        <a class="text-white" href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter fa-lg"></i></a>
-        <a class="text-white" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a class="text-white" href="#" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
-      </div>
-    </div>
-  </footer>
+      </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+      <!-- Placeholder Content Sections -->
+      <section class="mb-5">
+        <h2 class="section-title h5 mb-3">Lorem Ipsum Sections</h2>
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <div class="wire-box rounded-4 p-3 h-100 shadow-sm bg-white">
+              <p class="mb-0 text-muted small">
+                Placeholder content block – lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="wire-box rounded-4 p-3 h-100 shadow-sm bg-white">
+              <p class="mb-0 text-muted small">
+                Placeholder content block – sed do eiusmod tempor incididunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Banner (centered) -->
+      <section
+        class="social-strip mt-auto mb-3 rounded-4 d-flex flex-column align-items-center justify-content-center gap-2 text-center shadow-sm"
+      >
+        <span class="fw-semibold">Follow Us</span>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">LinkedIn</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">X</a>
+        </div>
+      </section>
+
+      <!-- Footer (centered) -->
+      <footer class="py-3 text-center text-muted small">
+        © 2025 Project Title. All rights reserved.
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
 
 
