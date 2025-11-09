@@ -9,8 +9,8 @@
   --border-hard: rgba(0,0,0,.2);   /* softened dark gray border */
   --shadow: 0 3px 12px rgba(0,0,0,.08); /* reusable soft shadow */
   --radius-m: 16px;
-  --radius-card: 16px;             /* rounded corners for section "cards" */
-  --radius-soft: 12px;             /* smaller rounded elements like social links */
+  --radius-card: 14px;             /* rounded corners for section "cards" */
+  --radius-soft: 11px;             /* smaller rounded elements like social links */
   --radius-pill: 999px;            /* fully rounded pills (buttons, nav) */
 
   --hero-measure: 80ch;            /* readable width for hero text */
@@ -61,7 +61,6 @@ body.bg-body{
 .logo-box {
   width: 55px;
   height: 55px;
-  border-radius: 8px;
   overflow: hidden;
   background: #f9f9f9;
 }
