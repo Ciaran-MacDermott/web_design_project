@@ -1,100 +1,103 @@
-/* Page background */
-body.bg-body {
-  background: #dcdcdc; /* light gray */
-  min-height: 100vh;
+/* ===== Global & Tokens ===== */
+:root{
+  --bg-page: #f5f5f5;
+  --text: #333;
+  --border: #d0d0d0;
+  --shadow: 0 3px 12px rgba(0,0,0,.06);
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-pill: 999px;
+
+  /* Responsive scales */
+  --max-measure: 60ch;
+  --hero-measure: 70ch;
+  --section-y: clamp(2rem, 4vw, 4rem);
 }
 
-/* Rounded app frame */
-.app-frame {
-  background: #f9fafb;
-  border: 2px solid #555;       /* dark gray border */
-  border-radius: 30px;           /* more rounded */
-  max-width: 440px;
-  min-height: 95vh;
-  display: flex;
-  flex-direction: column;
-  padding: 0 1.25rem 1.25rem;
+body.bg-body{
+  background: var(--bg-page);
+  color: var(--text);
 }
 
-/* Navbar */
-.navbar { background: transparent; }
+/* Consistent soft shadow on section cards/edges */
+.soft-shadow{ box-shadow: var(--shadow); }
 
-.navbar-brand { font-size: 1rem; }
+/* Constrain readable widths via utility classes */
+.hero-lead{ max-width: var(--hero-measure); }
+.content-box{ max-width: min(700px, 92vw); }
 
-/* Logo placeholder next to Project Title */
-.logo-box {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: #e5e5e5;
-  border: 1px solid #a3a3a3;
+/* ===== Header / Nav ===== */
+.site-header{ background:#fff; }
+
+.logo-box{
+  width: 30px; height: 30px; border-radius: 6px;
+  background:#e9ecef; border:1px solid #bbb;
 }
 
-/* Links */
-.nav-link { color: #444; font-size: 0.85rem; }
-.nav-link:hover, .nav-link.active { color: #000; }
-
-/* Book button */
-.btn-book {
-  background: #333;
-  color: #fff;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  padding-inline: 1.2rem;
-}
-.btn-book:hover { background: #000; }
-
-/* Hero area */
-.hero-visual { background: #e9ecef; min-height: 180px; }
-.hero-placeholder {
-  border: 2px dashed #aaa;
-  border-radius: 20px;
-  padding: 2rem 1rem;
-}
-
-/* Centered CTA image placeholder (above button) */
-.cta-image-box {
-  width: 80%;
-  max-width: 300px;
-  height: 120px;
-  background: #efefef;
-  border: 2px dashed #b7b7b7;
-  border-radius: 16px;
-}
-
-/* Section titles */
-.section-title { color: #222; }
-
-/* Content blocks */
-.wire-box { border: 1px dashed #aaa; }
-
-/* Social section (center-aligned) */
-.social-strip {
-  background: #f1f1f1;
-  padding: 0.8rem 1rem;
-  border: 1px solid #ccc;
-}
-.social-link {
-  font-size: 0.8rem;
+/* Bordered pill nav buttons */
+.nav-pill{
+  border:1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: .4rem 1rem;
+  font-size: .95rem;
   text-decoration: none;
-  background: #fff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid #ccc;
-  color: #000;
+  color: #333;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
-.social-link:hover { background: #eee; }
-
-/* Shared shadows for separation */
-.shadow-sm { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-
-/* Slightly larger on desktop */
-@media (min-width: 768px) {
-  .app-frame { max-width: 460px; }
+.nav-pill:hover,
+.nav-pill.active{
+  background:#333;
+  color:#fff !important;
+  border-color:#333;
 }
 
-/* Responsive */
-@media (max-width: 768px){
-  .hero{ padding: 72px 0; }
-  .hero h1{ font-size: 2rem; }
+/* Space the bar better on small screens */
+.navbar-collapse{ row-gap: .5rem; }
+
+/* ===== Hero ===== */
+#hero{ text-align:center; padding-block: var(--section-y); }
+.hero-title{
+  font-size: clamp(1.5rem, 2.8vw + 1rem, 2.25rem);
+  line-height: 1.2;
+}
+
+/* Responsive image placeholder above CTA */
+.cta-image-box{
+  width: min(520px, 92vw);
+  height: clamp(120px, 22vw, 220px);
+  background:#f2f3f5;
+  border:2px dashed #c7c7c7;
+  border-radius: var(--radius-m);
+}
+
+/* ===== Main Content ===== */
+#main-content{ padding-block: var(--section-y); }
+#main-content p{
+  text-align: center;
+  line-height: 1.65;
+}
+
+/* ===== Social Links ===== */
+#social-links{ text-align:center; }
+.social-link{
+  font-size:.9rem;
+  text-decoration:none;
+  background:#fff;
+  padding:.35rem .9rem;
+  border-radius: var(--radius-pill);
+  border:1px solid var(--border);
+  color:#000;
+  transition: background .2s ease, border-color .2s ease;
+}
+.social-link:hover{ background:#f4f4f4; border-color:#bbb; }
+
+/* ===== Footer ===== */
+.site-footer{ background:#fff; }
+
+/* ===== Responsive Spacing Helpers ===== */
+section + section{ margin-top: 0; } /* sections already spaced via padding */
+
+/* ===== Accessibility niceties ===== */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
 }
