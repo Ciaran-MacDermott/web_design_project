@@ -1,101 +1,74 @@
-/* ===== Global & Tokens ===== */
+/* ===== Tokens ===== */
 :root{
   --bg-page: #f5f5f5;
   --text: #333;
-  --border: #d0d0d0;
+  --border-hard: #222;           /* hard visible borders */
   --shadow: 0 3px 12px rgba(0,0,0,.06);
-  --radius-s: 10px;
-  --radius-m: 16px;
+  --radius-m: 12px;
   --radius-pill: 999px;
 
-  /* Responsive scales */
-  --max-measure: 60ch;
   --hero-measure: 70ch;
   --section-y: clamp(2rem, 4vw, 4rem);
 }
 
-body.bg-body{
-  background: var(--bg-page);
-  color: var(--text);
-}
+body.bg-body{ background: var(--bg-page); color: var(--text); }
 
-/* Consistent soft shadow on section cards/edges */
+/* Hard border utility to slam on everything for the wireframe */
+.border-all{ border: 2px solid var(--border-hard) !important; }
+
+/* Soft shadow utility to keep some depth */
 .soft-shadow{ box-shadow: var(--shadow); }
-
-/* Constrain readable widths via utility classes */
-.hero-lead{ max-width: var(--hero-measure); }
-.content-box{ max-width: min(700px, 92vw); }
 
 /* ===== Header / Nav ===== */
 .site-header{ background:#fff; }
 
 .logo-box{
-  width: 30px; height: 30px; border-radius: 6px;
-  background:#e9ecef; border:1px solid #bbb;
+  width: 28px; height: 28px; border-radius: 6px; background:#e9ecef;
 }
 
-/* Bordered pill nav buttons */
 .nav-pill{
-  border:1px solid var(--border);
   border-radius: var(--radius-pill);
-  padding: .4rem 1rem;
+  padding: .45rem 1rem;
   font-size: .95rem;
-  text-decoration: none;
-  color: #333;
-  transition: background .2s ease, color .2s ease, border-color .2s ease;
+  color:#111;
+  transition: background .15s ease, color .15s ease;
 }
 .nav-pill:hover,
-.nav-pill.active{
-  background:#333;
-  color:#fff !important;
-  border-color:#333;
-}
-
-/* Space the bar better on small screens */
-.navbar-collapse{ row-gap: .5rem; }
+.nav-pill.active{ background:#111; color:#fff !important; }
 
 /* ===== Hero ===== */
 #hero{ text-align:center; padding-block: var(--section-y); }
 .hero-title{
-  font-size: clamp(1.5rem, 2.8vw + 1rem, 2.25rem);
+  font-size: clamp(1.7rem, 2.8vw + 1rem, 2.6rem);
   line-height: 1.2;
 }
+.hero-lead{ max-width: var(--hero-measure); }
 
-/* Responsive image placeholder above CTA */
-.cta-image-box{
-  width: min(520px, 92vw);
-  height: clamp(120px, 22vw, 220px);
-  background:#f2f3f5;
-  border:2px dashed #c7c7c7;
+.hero-figure{
+  width: min(820px, 90vw);
+  height: clamp(160px, 30vw, 360px);
   border-radius: var(--radius-m);
 }
+.object-cover{ object-fit: cover; }
 
 /* ===== Main Content ===== */
 #main-content{ padding-block: var(--section-y); }
-#main-content p{
-  text-align: center;
-  line-height: 1.65;
-}
+.content-box{ max-width: min(900px, 92vw); }
+#main-content p{ text-align:center; line-height:1.65; }
 
 /* ===== Social Links ===== */
 #social-links{ text-align:center; }
 .social-link{
-  font-size:.9rem;
-  text-decoration:none;
-  background:#fff;
-  padding:.35rem .9rem;
+  font-size:.9rem; text-decoration:none;
+  background:#fff; padding:.4rem 1rem;
   border-radius: var(--radius-pill);
-  border:1px solid var(--border);
   color:#000;
-  transition: background .2s ease, border-color .2s ease;
+  transition: background .15s ease;
 }
-.social-link:hover{ background:#f4f4f4; border-color:#bbb; }
+.social-link:hover{ background:#f4f4f4; }
 
 /* ===== Footer ===== */
 .site-footer{ background:#fff; }
-
-/* ===== Responsive Spacing Helpers ===== */
-section + section{ margin-top: 0; } /* sections already spaced via padding */
 
 /* ===== Accessibility niceties ===== */
 @media (prefers-reduced-motion: reduce){
