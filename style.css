@@ -10,7 +10,7 @@
   --hero-measure: 70ch;
   --section-y: clamp(2rem, 4vw, 4rem);
 
-  --wave-fill: #e6f4ea; /* pale natural green */
+  --wave-fill: rgba(0,0,0,.5); 
 }
 
 body.bg-body{ background: var(--bg-page); color: var(--text); }
@@ -46,24 +46,11 @@ body.bg-body{ background: var(--bg-page); color: var(--text); }
 
 /* Waves */
 /* Waves */
-.section-wave {
-  width: 100%;
-  line-height: 0;
-}
-.section-wave svg {
-  display: block;
-  width: 100%;
-  height: 30px; /* was 80px — smaller height */
-}
-.section-wave path {
-  fill: #e0e0e0; /* light gray instead of green */
-  opacity: 0.6;  /* makes it softer and less solid */
-}
-.wave-down { margin-top: -1px; }
-.wave-up {
-  margin-bottom: -1px;
-  transform: rotate(180deg);
-}
+.section-wave{ width:100%; line-height:0; }
+.section-wave svg{ display:block; width:100%; height:25px; }
+.section-wave path{ fill: var(--wave-fill); }
+.wave-down{ margin-top:-2px; } /* overlap borders a touch */
+.wave-up{ margin-bottom:-2px; transform: rotate(180deg); }
 
 
 /* Main content */
