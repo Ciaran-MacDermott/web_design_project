@@ -4,7 +4,7 @@
    Change these to update theme globally.
 =============================================================== */
 :root{
-  --bg-page: #ededed;              /* overall page background (light gray gutters) */
+  --bg-page: #78866B;              /* overall page background (light gray green gutters) */
   --text: #333;                    /* main text color */
   --border-hard: rgba(0,0,0,.2);   /* softened dark gray border */
   --shadow: 0 3px 12px rgba(0,0,0,.08); /* reusable soft shadow */
