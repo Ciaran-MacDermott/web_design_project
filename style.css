@@ -55,7 +55,7 @@ body.bg-body{
 /* ============================================================
    HEADER & NAVBAR
 =============================================================== */
-.site-header{ background: var(--bg-page); } /* header matches page background */
+.site-header{ background: lightgray } /* header matches page background */
 
 /* Logo wrapper box */
 .logo-box {
@@ -101,7 +101,7 @@ body.bg-body{
   padding-inline: 1.25rem;         /* left/right padding (gutters) */
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
-  background: #fff;                /* white interior on gray background */
+  background: var(--bg-page);            /* white interior on gray background */
   box-shadow: 0 3px 15px rgba(0,0,0,0.05);
 }
 
