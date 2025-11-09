@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Emerald Roots Template</title>
+    <title>Wireframe — Home</title>
 
     <!-- Bootstrap 5 -->
     <link
@@ -55,52 +55,59 @@
       <div class="container-xxl">
         <h1 class="mb-3 hero-title">Lorem Ipsum Dolor Sit Amet</h1>
 
-        <!-- Image ABOVE CTA (forest/organic vibe) -->
+        <!-- Forest image ABOVE CTA -->
         <figure class="mx-auto mb-3 hero-figure border-all overflow-hidden">
           <img
-            src="https://source.unsplash.com/featured/800x400/?forest,trees,nature"
+            src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
             alt="Forest placeholder"
             class="w-100 h-100 object-cover"
           />
         </figure>
 
         <p class="lead mx-auto hero-lead">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tortor
-          eget sapien malesuada bibendum sit amet a elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tortor eget sapien malesuada bibendum.
         </p>
 
-        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3 border-all">Call to Action</a>
+        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3 border-all">Become a Member</a>
       </div>
     </section>
+
+    <!-- Wave divider (down) -->
+    <div class="section-wave wave-down" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C240,90 480,0 720,50 C960,100 1200,30 1440,70 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
 
     <!-- MAIN CONTENT -->
     <main id="main-content" class="py-5 bg-white border-all soft-shadow">
       <div class="container-xxl">
         <h2 class="h4 mb-4">Lorem Ipsum Section</h2>
 
-        <!-- Single centered block with hard border -->
         <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 rounded-4 bg-light-subtle border-all">
           <p class="text-muted mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus sed
-            lorem tristique sodales. Praesent nec orci sit amet lorem bibendum rhoncus
-            sit amet nec arcu. Curabitur cursus placerat justo, non feugiat augue interdum at.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus sed lorem tristique sodales.
+            Praesent nec orci sit amet lorem bibendum rhoncus sit amet nec arcu.
           </p>
 
-          <!-- Secondary illustrative image (organic) -->
-          <div class="row justify-content-center g-3">
-            <div class="col-12 col-md-10 col-lg-8">
-              <figure class="ratio ratio-16x9 border-all overflow-hidden rounded-3">
-                <img
-                  src="https://source.unsplash.com/featured/1200x675/?organic,farm,vegetables"
-                  alt="Organic farming placeholder"
-                  class="w-100 h-100 object-cover"
-                />
-              </figure>
-            </div>
-          </div>
+          <!-- Regenerative ag image -->
+          <figure class="ratio ratio-16x9 border-all overflow-hidden rounded-3 mx-auto" style="max-width: 900px;">
+            <img
+              src="https://source.unsplash.com/featured/1200x675/?regenerative,agriculture,soil"
+              alt="Regenerative agriculture placeholder"
+              class="w-100 h-100 object-cover"
+            />
+          </figure>
         </div>
       </div>
     </main>
+
+    <!-- Wave divider (up) -->
+    <div class="section-wave wave-up" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,70 C240,30 480,100 720,50 C960,0 1200,90 1440,40 L1440,0 L0,0 Z"></path>
+      </svg>
+    </div>
 
     <!-- SOCIAL LINKS -->
     <section id="social-links" class="py-4 bg-white border-all soft-shadow">
@@ -111,6 +118,32 @@
           <a href="#" class="social-link border-all">LinkedIn</a>
           <a href="#" class="social-link border-all">Instagram</a>
           <a href="#" class="social-link border-all">X</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ROW (centered) -->
+    <section id="contact-row" class="py-4 bg-white border-all soft-shadow">
+      <div class="container-xxl">
+        <div class="row gy-3 justify-content-center">
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="contact-card border-all rounded-3 p-3 h-100">
+              <div class="fw-semibold mb-1">📧 Email</div>
+              <div class="text-muted small">info@example.org</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="contact-card border-all rounded-3 p-3 h-100">
+              <div class="fw-semibold mb-1">📞 Phone</div>
+              <div class="text-muted small">+353 (0)1 234 5678</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="contact-card border-all rounded-3 p-3 h-100">
+              <div class="fw-semibold mb-1">📍 Address</div>
+              <div class="text-muted small">123 Green Lane, Co. Galway</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
