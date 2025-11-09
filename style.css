@@ -1,74 +1,112 @@
-/* ===== Tokens ===== */
+/* ============================================================
+   TOKENS & GLOBAL VARIABLES
+   Define colors, radii, spacing, and shared design rules.
+   Change these to update theme globally.
+=============================================================== */
 :root{
-  --bg-page: #f5f5f5;
-  --text: #333;
-  --border-hard: rgba(0,0,0,.2);            /* ~50% opacity (softened) */
-  --shadow: 0 3px 12px rgba(0,0,0,.1);
+  --bg-page: #ededed;              /* overall page background (light gray gutters) */
+  --text: #333;                    /* main text color */
+  --border-hard: rgba(0,0,0,.2);   /* softened dark gray border */
+  --shadow: 0 3px 12px rgba(0,0,0,.08); /* reusable soft shadow */
   --radius-m: 16px;
-  --radius-pill: 999px;
+  --radius-card: 16px;             /* rounded corners for section "cards" */
+  --radius-soft: 12px;             /* smaller rounded elements like social links */
+  --radius-pill: 999px;            /* fully rounded pills (buttons, nav) */
 
-  --hero-measure: 70ch;
-  --section-y: clamp(2rem, 4vw, 4rem);
+  --hero-measure: 80ch;            /* readable width for hero text */
+  --section-y: clamp(2rem, 4vw, 4rem); /* responsive vertical spacing */
 
-  --wave-fill: rgba(0,0,0,.3); 
+  --wave-fill: #e3e3e3;            /* color for divider waves */
 }
 
-body.bg-body{ background: var(--bg-page); color: var(--text); }
+/* ============================================================
+   GLOBAL LAYOUT
+   Applies overall page setup (background, text color, padding)
+=============================================================== */
+body.bg-body{
+  background: var(--bg-page);      /* light gray background for gutters */
+  color: var(--text);
+  padding-block: 1.5rem;           /* breathing space above & below main card */
+}
 
-/* Utilities */
-.border-all{ border: 2px solid var(--border-hard) !important; }
-.soft-shadow{ box-shadow: var(--shadow); }
-.object-cover{ object-fit: cover; }
+/* ============================================================
+   UTILITIES (small reusable helpers)
+=============================================================== */
+.border-all{
+  border: 2px solid var(--border-hard) !important; /* visible outlines for sections */
+  border-radius: var(--radius-card);               /* rounded corners */
+}
+.soft-shadow{ box-shadow: var(--shadow); }         /* mild elevation effect */
+.object-cover{ object-fit: cover; }                /* keeps images proportional */
 
-/* Header / Nav */
-.site-header{ background:lightgray; }
+/* Round all major sections & cards by default */
+#hero,
+#main-content,
+#social-links,
+#contact-row,
+.content-box,
+.contact-card,
+.hero-figure,
+.border-all {
+  border-radius: var(--radius-card) !important;
+  overflow: hidden;                /* ensures images respect rounded corners */
+}
 
-/* Logo container */
+/* ============================================================
+   HEADER & NAVBAR
+=============================================================== */
+.site-header{ background: var(--bg-page); } /* header matches page background */
+
+/* Logo wrapper box */
 .logo-box {
-  width: 55px;            /* controls total logo area */
+  width: 55px;
   height: 55px;
   border-radius: 8px;
-  overflow: hidden;        /* hides anything spilling out */
-  background: #f9f9f9;     /* subtle background */
+  overflow: hidden;
+  background: #f9f9f9;
 }
 
-/* Logo image itself */
+/* Actual logo image inside */
 .logo-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* or 'contain' if your logo has text */
+  object-fit: contain; /* fits nicely inside box without cropping */
 }
 
-/* Optional: make logo smaller on mobile */
+/* Smaller logo on mobile */
 @media (max-width: 768px) {
-  .logo-box {
-    width: 45px;
-    height: 45px;
-  }
+  .logo-box { width: 45px; height: 45px; }
 }
 
+/* Nav link buttons */
 .nav-pill{
   border-radius: var(--radius-pill);
-  padding:.45rem 1rem;
-  font-size:.95rem;
-  color:#111;
+  padding: .45rem 1rem;
+  font-size: .95rem;
+  color: #111;
   transition: background .15s ease, color .15s ease;
 }
 .nav-pill:hover,
-.nav-pill.active{ background:#111; color:#fff !important; }
-
-/* Page Wrapper section*/
-/* ----- Page Wrapper ----- */
-#page-wrapper {
-  max-width: 1400px;              /* keeps content centered and readable */
-  margin: 0 auto;                 /* centers wrapper */
-  padding-inline: 1.5rem;         /* global gutters */
-  border: 2px solid #d6d6d6;      /* light gray border for visualization */
-  border-radius: 12px;            /* soft corners */
-  background: #fff;               /* white inner background */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); /* subtle depth */
+.nav-pill.active{
+  background: #111;
+  color: #fff !important;
 }
 
+/* ============================================================
+   PAGE WRAPPER
+   This is the main centred "card" that contains all sections.
+=============================================================== */
+#page-wrapper {
+  max-width: 1500px;               /* overall site width (content area) */
+  margin: 0 auto;                  /* centers the wrapper */
+  padding-inline: 1.25rem;         /* left/right padding (gutters) */
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  background: #fff;                /* white interior on gray background */
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+/* Slightly adjust padding on mobile */
 @media (max-width: 768px) {
   #page-wrapper {
     padding-inline: 1rem;
@@ -76,58 +114,134 @@ body.bg-body{ background: var(--bg-page); color: var(--text); }
   }
 }
 
-/* Keep other sections (hero, socials, etc.) tidy inside */
+/* Adds space between sections inside wrapper */
 #page-wrapper section {
-  margin-bottom: 2rem; /* spacing between sections */
+  margin-bottom: 2rem;
 }
 
-/* Light gray tone for all .border-light utilities */
-.border-light {
-  border: 2px solid #ccc !important;
+/* ============================================================
+   HERO SECTION
+=============================================================== */
+#hero{
+  text-align: center;
+  padding-block: var(--section-y);
 }
 
-/* Hero */
-#hero{ text-align:center; padding-block: var(--section-y); }
-.hero-title{ font-size:clamp(1.7rem, 2.8vw + 1rem, 2.6rem); line-height:1.2; }
-.hero-lead{ max-width: var(--hero-measure); }
+/* Title text scaling with screen size */
+.hero-title{
+  font-size: clamp(1.7rem, 2.8vw + 1rem, 2.6rem);
+  line-height: 1.2;
+}
+
+/* Paragraph width (improves readability) */
+.hero-lead{
+  max-width: var(--hero-measure);
+  margin: 0 auto;
+}
+
+/* Hero image area (wider and rounded) */
 .hero-figure{
-  width:min(900px, 92vw);
-  height:clamp(180px, 28vw, 400px);
-  border-radius: var(--radius-m);
+  width: min(1100px, 96vw);
+  height: clamp(180px, 28vw, 420px);
+  border-radius: var(--radius-card);
+  margin-inline: auto;
 }
 
-/* Waves */
-/* Waves */
-.section-wave{ width:100%; line-height:0; }
-.section-wave svg{ display:block; width:100%; height:40px; }
-.section-wave path{ fill: var(--wave-fill); }
-.wave-down{ margin-top:-2px; } /* overlap borders a touch */
-.wave-up{ margin-bottom:-2px; transform: rotate(180deg); }
+/* ============================================================
+   WAVY DIVIDERS
+   These SVG shapes visually separate sections.
+=============================================================== */
+.section-wave{
+  width: 100%;
+  line-height: 0;
+}
+.section-wave svg{
+  display: block;
+  width: 100%;
+  height: 36px;                    /* reduced height = more subtle */
+}
+.section-wave path{
+  fill: var(--wave-fill);
+  opacity: 0.55;                   /* makes waves light and elegant */
+}
+.wave-down{ margin-top: -2px; }
+.wave-up{
+  margin-bottom: -4px;
+  transform: rotate(180deg);
+}
 
+/* ============================================================
+   MAIN CONTENT AREA
+=============================================================== */
+#main-content{
+  padding-block: var(--section-y);
+  background: #fff;
+}
+.content-box{
+  max-width: min(1100px, 96vw);    /* slightly wider for less empty space */
+  margin-inline: auto;
+}
+#main-content p{
+  text-align: center;
+  line-height: 1.65;
+}
 
-/* Main content */
-#main-content{ padding-block: var(--section-y); background:#fff; }
-.content-box{ max-width:min(900px, 92vw); }
-#main-content p{ text-align:center; line-height:1.65; }
+/* ============================================================
+   SOCIAL LINKS SECTION
+=============================================================== */
+#social-links{
+  text-align: center;
+  background: #fff;
+}
 
-/* Socials */
-#social-links{ text-align:center; background:#fff; }
+/* Each social button */
 .social-link{
-  font-size:.9rem; text-decoration:none;
-  background:#fff; padding:.4rem 1rem;
-  border-radius: var(--radius-pill); color:#000;
+  font-size: .9rem;
+  text-decoration: none;
+  background: #fff;
+  padding: .4rem 1rem;
+  border-radius: var(--radius-soft);
+  color: #000;
   transition: background .15s ease;
 }
-.social-link:hover{ background:#f4f4f4; }
-
-/* Contacts row */
-#contact-row{ background:#fff; }
-.contact-card{ background:#fff; }
-
-/* Footer */
-.site-footer{ background:#fff; }
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce){
-  *{ animation:none !important; transition:none !important; }
+.social-link:hover{
+  background: #f4f4f4;
 }
+
+/* ============================================================
+   CONTACT SECTION
+=============================================================== */
+#contact-row{ background: #fff; }
+.contact-card{
+  background: #fff;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+/* ============================================================
+   FOOTER
+=============================================================== */
+.site-footer{ background: var(--bg-page); }
+
+/* ============================================================
+   CONTAINER GUTTERS
+   Reduces Bootstrap's default side padding for tighter layout
+=============================================================== */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  padding-left: 0.85rem !important;
+  padding-right: 0.85rem !important;
+}
+
+/* ============================================================
+   ACCESSIBILITY: Reduced Motion
+   Disables animations for users who prefer static interfaces.
+=============================================================== */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}
+
