@@ -174,18 +174,30 @@ body.bg-body {
   padding-block: var(--section-y);
 }
 
-/* circular logo in hero */
+/* circular logo in hero using div background */
 .hero-logo-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.hero-logo-img {
-  width: 86px;
-  height: 86px;
-  object-fit: cover;
+.hero-logo-shell {
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  background: #fdfaf3;
+  padding: 8px;
+  background: #f9f3e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url("https://plus.unsplash.com/premium_photo-1732775543535-bba27e33fee0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2532");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -243,7 +255,7 @@ body.bg-body {
 }
 .section-wave path {
   fill: var(--wave-fill);
-  opacity: 0.45;   /* more visible, same green tone */
+  opacity: 0.9;   /* more visible, same green tone */
 }
 .wave-down {
   margin-top: -2px;
@@ -258,13 +270,13 @@ body.bg-body {
 =============================================================== */
 #main-content {
   padding-block: var(--section-y);
-  background: #f7fbf8; /* gentle green tint for variety */
+  background: #e7f4ed; /* green tint to add colour */
 }
 
 .content-box {
   max-width: min(1100px, 96vw);
   margin-inline: auto;
-  background: #f9f3e5; /* warm parchment tint */
+  background: #fff9ec; /* warm parchment tint */
 }
 
 #main-content p {
@@ -298,7 +310,7 @@ body.bg-body {
 =============================================================== */
 #social-links {
   text-align: center;
-  background: #f2faf5;
+  background: #e2f0e8; /* soft green-blue for variety */
 }
 
 /* Each social button */
@@ -325,7 +337,7 @@ body.bg-body {
    CONTACT SECTION
 =============================================================== */
 #contact-row {
-  background: #f7fbf8;
+  background: #eaf1ff; /* soft blue to add colour */
 }
 .contact-card {
   background: #fdfaf3;
@@ -337,7 +349,7 @@ body.bg-body {
    NEWSLETTER SECTION
 =============================================================== */
 #newsletter {
-  background: #f9f2e8;
+  background: #fff3e0; /* warm orange tint */
   text-align: left;
 }
 
@@ -355,6 +367,21 @@ body.bg-body {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+/* checkbox styling: clearer border */
+.checkbox-card {
+  background: #fffdf7;
+}
+
+.form-check-input {
+  border: 2px solid var(--emerald);
+  box-shadow: none;
+}
+
+.form-check-input:checked {
+  background-color: var(--emerald);
+  border-color: var(--emerald);
 }
 
 /* ============================================================
@@ -401,6 +428,3 @@ body.bg-body {
     transition: none !important;
   }
 }
-
-
-
