@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wireframe — Home</title>
+    <title>Emerald Roots — Agroforestry for a Greener Ireland</title>
+
 
     <!-- Bootstrap 5 -->
     <link
@@ -15,14 +16,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
+
   <body class="bg-body text-center">
     <!-- HEADER / NAV -->
     <header class="site-header border-all soft-shadow py-2 py-md-3">
-      <nav class="navbar navbar-expand-md" aria-label="Primary">
+      <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary">
         <div class="container-xxl d-flex justify-content-between align-items-center">
           <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <!-- Logo Placeholder-->
-            <!-- Logo Placeholder -->
+            <!-- Logo -->
             <span class="logo-box border-all d-flex align-items-center justify-content-center">
               <img
                 src="https://plus.unsplash.com/premium_photo-1732775543535-bba27e33fee0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2532"
@@ -31,7 +32,8 @@
               />
             </span>
             <span>Emerald Roots</span>
-            </a>
+          </a>
+
 
           <button
             class="navbar-toggler"
@@ -45,9 +47,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
+
           <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="mainNav">
             <ul class="navbar-nav gap-2 gap-md-3">
-              <li class="nav-item"><a class="nav-link nav-pill border-all active" href="index.html">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link nav-pill border-all active" href="index.html">Home</a>
+              </li>
               <li class="nav-item"><a class="nav-link nav-pill border-all" href="about_us.html">About Us</a></li>
               <li class="nav-item"><a class="nav-link nav-pill border-all" href="activities.html">Activities</a></li>
               <li class="nav-item"><a class="nav-link nav-pill border-all" href="get_involved.html">Get Involved</a></li>
@@ -58,74 +63,165 @@
       </nav>
     </header>
 
+
+    <!-- PAGE WRAPPER CARD -->
     <main id="page-wrapper" class="border-light shadow-sm">
-      <!-- HERO -->
-      <section id="hero" class="py-5 bg-white border-all soft-shadow">
-        <div class="container-xxl">
-          <h1 class="mb-3 hero-title">Lorem Ipsum Dolor Sit Amet</h1>
-  
-          <!-- Forest image ABOVE CTA -->
-          <figure class="mx-auto mb-3 hero-figure border-all overflow-hidden style="max-width: 1200px;">
-            <img
-              src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-              alt="Forest placeholder"
-              class="w-100 h-100 object-cover"
-            />
-          </figure>
-  
-          <p class="lead mx-auto hero-lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-  
-          <a href="#" class="btn btn-primary rounded-pill px-4 mt-3 border-all">Become a Member</a>
-        </div>
-      </section>
-  
+      <!-- HERO (top card) -->
+      <section id="hero" class="py-5 bg-white border-all soft-shadow" data-reveal>
+  <div class="container-xxl">
+    <p class="text-uppercase small mb-2 text-emerald fw-semibold tracking-wide">
+      Agroforestry for a climate-resilient Ireland
+    </p>
+
+
+    <!-- HERO TITLE USING COMPANY NAME -->
+    <h1 class="mb-3 hero-title">
+      Emerald Roots
+    </h1>
+
+
+    <!-- Forest image ABOVE CTA -->
+    <figure
+      class="mx-auto mb-3 hero-figure border-all overflow-hidden"
+      style="max-width: 1200px;"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+        alt="Native forest in Ireland"
+        class="w-100 h-100 object-cover"
+      />
+    </figure>
+
+
+    <p class="lead mx-auto hero-lead">
+      Emerald Roots is a student-led agroforestry initiative supporting farmers, communities,
+      and campuses to plant diverse native trees, restore soils, and build climate resilience
+      across Ireland.
+    </p>
+    <p class="hero-lead mx-auto mt-2 small text-muted">
+      We co-design simple, practical planting plans and connect volunteers with farms that
+      are ready to experiment with climate-smart practices.
+    </p>
+
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-4">
+      <a href="#newsletter" class="btn btn-primary rounded-pill px-4 border-all">
+        Join our newsletter
+      </a>
+      <a href="get_involved.html" class="btn btn-outline-emerald rounded-pill px-4 border-all">
+        Explore volunteer days
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
       <!-- Wave divider (down) -->
       <div class="section-wave wave-down" aria-hidden="true">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,40 C240,90 480,0 720,50 C960,100 1200,30 1440,70 L1440,100 L0,100 Z"></path>
         </svg>
       </div>
-  
-      <!-- MAIN CONTENT -->
-      <main id="main-content" class="py-5 bg-white border-all soft-shadow">
+
+
+      <!-- MAIN CONTENT (second card) -->
+      <section id="main-content" class="py-5 bg-white border-all soft-shadow" data-reveal>
         <div class="container-xxl">
-          <h2 class="h4 mb-4">Lorem Ipsum Section</h2>
-  
+          <h2 class="h4 mb-4">Why agroforestry matters</h2>
+
+
           <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 rounded-4 bg-light-subtle border-all">
             <p class="text-muted mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus sed lorem tristique sodales.
-              Praesent nec orci sit amet lorem bibendum rhoncus sit amet nec arcu.
+              Agroforestry blends trees, crops, and livestock on the same piece of land. Done well,
+              it restores biodiversity, protects waterways, and helps farmers stay productive in a
+              changing climate. Instead of single-species plantations, we focus on mixed native
+              woodlands that work with local soils and communities.
             </p>
-  
+
+
             <!-- Regenerative ag image -->
-            <figure class="ratio ratio-16x9 border-all overflow-hidden rounded-3 mx-auto" style="max-width: 1200px;">
+            <figure
+              class="ratio ratio-16x9 border-all overflow-hidden rounded-3 mx-auto"
+              style="max-width: 1200px;"
+            >
               <img
                 src="https://images.unsplash.com/photo-1492496913980-501348b61469?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-                alt="Regenerative agriculture placeholder"
+                alt="Agroforestry landscape with mixed trees and crops"
                 class="w-100 h-100 object-cover"
               />
             </figure>
-            Forest restoration is defined as "actions to re-instate ecological processes, which accelerate recovery of forest structure, ecological functioning and biodiversity levels towards those typical of climax forest",[1] i.e. the end-stage of natural forest succession. Climax forests are relatively stable ecosystems that have developed the maximum biomass, structural complexity and species diversity that are possible within the limits imposed by climate and soil and without continued disturbance from humans (more explanation here). Climax forest is therefore the target ecosystem, which defines the ultimate aim of forest restoration. Since climate is a major factor that determines climax forest composition, global climate change may result in changing restoration aims.[2] Additionally, the potential impacts of climate change on restoration goals must be taken into account, as changes in temperature and precipitation patterns may alter the composition and distribution of climax forests.[3]
 
-Forest restoration is a specialized form of reforestation, but it differs from conventional tree plantations in that its primary goals are biodiversity recovery and environmental protection.[4][5]
+
+            <p class="mt-4 text-start text-md-center">
+              Forest restoration is more than planting rows of trees. Our projects aim to rebuild
+              living ecosystems: layered canopies, healthy soils, and thriving wildlife corridors.
+              We prioritise native species, collaborate with local farmers and community groups, and
+              use each site as a living classroom for students to learn monitoring, mapping, and
+              long-term stewardship.
+            </p>
+
+
+            <!-- Animated stats -->
+            <div class="row g-3 mt-4 stats-row">
+              <div class="col-12 col-md-4">
+                <div class="stat-card border-all h-100 py-3 px-3">
+                  <div class="stat-label small text-uppercase text-muted mb-1">
+                    Native trees planted
+                  </div>
+                  <div class="stat-value h3 mb-0">
+                    <span data-count="42000">0</span>+
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Across pilot sites in Galway, Clare, and Mayo.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="stat-card border-all h-100 py-3 px-3">
+                  <div class="stat-label small text-uppercase text-muted mb-1">
+                    Student volunteers
+                  </div>
+                  <div class="stat-value h3 mb-0">
+                    <span data-count="280">0</span>+
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Learning field skills while supporting real farms.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="stat-card border-all h-100 py-3 px-3">
+                  <div class="stat-label small text-uppercase text-muted mb-1">
+                    Hectares under restoration
+                  </div>
+                  <div class="stat-value h3 mb-0">
+                    <span data-count="65">0</span>+
+                  </div>
+                  <p class="small text-muted mb-0">
+                    From riparian buffers to shelterbelts and food forests.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </main>
-  
+      </section>
+
+
       <!-- Wave divider (up) -->
       <div class="section-wave wave-up" aria-hidden="true">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,70 C240,30 480,100 720,50 C960,0 1200,90 1440,40 L1440,0 L0,0 Z"></path>
         </svg>
       </div>
-  
+
+
       <!-- SOCIAL LINKS -->
-      <section id="social-links" class="py-4 bg-white border-all soft-shadow">
+      <section id="social-links" class="py-4 bg-white border-all soft-shadow" data-reveal>
         <div class="container-xxl">
-          <h3 class="h6 fw-semibold mb-3">Follow Us</h3>
+          <h3 class="h6 fw-semibold mb-3">Follow Emerald Roots</h3>
           <div class="d-flex justify-content-center flex-wrap gap-2">
             <a href="#" class="social-link border-all">Facebook</a>
             <a href="#" class="social-link border-all">LinkedIn</a>
@@ -134,45 +230,235 @@ Forest restoration is a specialized form of reforestation, but it differs from c
           </div>
         </div>
       </section>
-  
+
+
       <!-- CONTACT ROW (centered) -->
-      <section id="contact-row" class="py-4 bg-white border-all soft-shadow">
+      <section id="contact-row" class="py-4 bg-white border-all soft-shadow" data-reveal>
         <div class="container-xxl">
           <div class="row gy-3 justify-content-center">
             <div class="col-12 col-md-4 col-lg-3">
               <div class="contact-card border-all rounded-3 p-3 h-100">
                 <div class="fw-semibold mb-1">📧 Email</div>
-                <div class="text-muted small">info@example.org</div>
+                <div class="text-muted small">hello@emeraldroots.ie</div>
               </div>
             </div>
             <div class="col-12 col-md-4 col-lg-3">
               <div class="contact-card border-all rounded-3 p-3 h-100">
                 <div class="fw-semibold mb-1">📞 Phone</div>
-                <div class="text-muted small">+353 (0)1 234 5678</div>
+                <div class="text-muted small">+353 (0)91 123 456</div>
               </div>
             </div>
             <div class="col-12 col-md-4 col-lg-3">
               <div class="contact-card border-all rounded-3 p-3 h-100">
                 <div class="fw-semibold mb-1">📍 Address</div>
-                <div class="text-muted small">123 Green Lane, Co. Galway</div>
+                <div class="text-muted small">Campus Green Hub, Co. Galway</div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-  
-      <!-- FOOTER -->
-      <footer class="site-footer py-3 text-muted border-all soft-shadow">
+
+
+      <!-- NEWSLETTER SIGNUP (third section) -->
+      <section id="newsletter" class="py-5 bg-white border-all soft-shadow" data-reveal>
         <div class="container-xxl">
-          <small>© 2025 Project Title. All rights reserved.</small>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+              <h3 class="mb-3">Stay rooted with our newsletter</h3>
+              <p class="text-muted mb-4">
+                Get seasonal agroforestry tips, project updates, and calls for volunteers straight
+                to your inbox. Perfect for students, farmers, and anyone curious about climate-smart
+                land use.
+              </p>
+
+
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="newsletterName" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="newsletterName"
+                      placeholder="Alex Murphy"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your name.
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <label for="newsletterEmail" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="newsletterEmail"
+                      placeholder="you@example.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+
+
+                  <div class="col-12">
+                    <label for="newsletterInterest" class="form-label">
+                      What are you most interested in?
+                    </label>
+                    <select class="form-select" id="newsletterInterest" required>
+                      <option value="" selected disabled>Choose one...</option>
+                      <option value="farmer">Support for farmers &amp; landowners</option>
+                      <option value="student">Student &amp; research updates</option>
+                      <option value="events">Workshops &amp; volunteering days</option>
+                      <option value="policy">Policy &amp; funding news</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please choose an area of interest.
+                    </div>
+                  </div>
+
+
+                  <div class="col-12">
+                    <div class="form-check text-start">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="newsletterConsent"
+                        required
+                      />
+                      <label class="form-check-label" for="newsletterConsent">
+                        I agree to receive emails from Emerald Roots and understand I can unsubscribe at
+                        any time.
+                      </label>
+                      <div class="invalid-feedback">
+                        Please confirm you’re happy to hear from us.
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-12 text-start text-md-end">
+                    <button class="btn btn-primary rounded-pill px-4" type="submit">
+                      Sign up
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      </footer>
-  
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-      ></script>
+      </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer py-3 text-muted border-all soft-shadow">
+      <div class="container-xxl">
+        <small>
+          © <span data-year>2025</span> Emerald Roots. Created as an academic project.
+        </small>
+      </div>
+    </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- Custom JS: scroll reveal, counters, validation, dynamic year -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Scroll reveal on sections
+        const revealEls = document.querySelectorAll('[data-reveal]');
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+
+        revealEls.forEach((el) => revealObserver.observe(el));
+
+
+        // Animated stats counters
+        function animateCounter(el) {
+          const target = parseInt(el.dataset.count, 10);
+          const duration = 1800;
+          let startTime = null;
+
+
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const value = Math.floor(progress * target);
+            el.textContent = value.toLocaleString();
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          }
+
+
+          window.requestAnimationFrame(step);
+        }
+
+
+        const counters = document.querySelectorAll('[data-count]');
+        const counterObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !entry.target.dataset.animated) {
+                animateCounter(entry.target);
+                entry.target.dataset.animated = 'true';
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.6 }
+        );
+
+
+        counters.forEach((el) => counterObserver.observe(el));
+
+
+        // Bootstrap form validation for newsletter
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            'submit',
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+
+
+        // Dynamic footer year
+        const yearSpan = document.querySelector('[data-year]');
+        if (yearSpan) {
+          yearSpan.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
   </body>
 </html>
+
+
+
