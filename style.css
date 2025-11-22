@@ -1,109 +1,180 @@
+=================
 /* ============================================================
    TOKENS & GLOBAL VARIABLES
-   Define colors, radii, spacing, and shared design rules.
-   Change these to update theme globally.
+   Emerald Roots colour system and shared design tokens
 =============================================================== */
-:root{
-  --bg-page: #78866B;              /* overall page background (light gray green gutters) */
-  --text: #333;                    /* main text color */
-  --border-hard: rgba(0,0,0,.2);   /* softened dark gray border */
-  --shadow: 0 3px 12px rgba(0,0,0,.08); /* reusable soft shadow */
+:root {
+  /* Core colours */
+  --emerald: #1f5b3d;              /* primary accent: deep, earthy green */
+  --emerald-dark: #17412c;
+  --bg-page: #f2ede4;              /* warm off-white background */
+  --text: #2b312d;                 /* main text colour */
+
+
+  --border-hard: rgba(10, 40, 25, 0.25); /* softened dark border */
+  --shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+
   --radius-m: 16px;
-  --radius-card: 14px;             /* rounded corners for section "cards" */
-  --radius-soft: 11px;             /* smaller rounded elements like social links */
-  --radius-pill: 999px;            /* fully rounded pills (buttons, nav) */
+  --radius-card: 14px;
+  --radius-soft: 11px;
+  --radius-pill: 999px;
 
-  --hero-measure: 80ch;            /* readable width for hero text */
-  --section-y: clamp(2rem, 4vw, 4rem); /* responsive vertical spacing */
 
-  --wave-fill: #e3e3e3;            /* color for divider waves */
+  --hero-measure: 80ch;
+  --section-y: clamp(2rem, 4vw, 4rem);
+
+
+  --wave-fill: #1f5b3d; /* emerald tone for waves */
 }
+
 
 /* ============================================================
    GLOBAL LAYOUT
-   Applies overall page setup (background, text color, padding)
 =============================================================== */
-body.bg-body{
-  background: var(--bg-page);      /* light gray background for gutters */
+body.bg-body {
+  background: var(--bg-page);
   color: var(--text);
-  padding-block: 1.5rem;           /* breathing space above & below main card */
+  padding-block: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* ============================================================
-   UTILITIES (small reusable helpers)
-=============================================================== */
-.border-all{
-  border: 2px solid var(--border-hard) !important; /* visible outlines for sections */
-  border-radius: var(--radius-card);               /* rounded corners */
+
+/* Small helper to tint text emerald */
+.text-emerald {
+  color: var(--emerald);
 }
-.soft-shadow{ box-shadow: var(--shadow); }         /* mild elevation effect */
-.object-cover{ object-fit: cover; }                /* keeps images proportional */
+
+
+/* Letter spacing helper */
+.tracking-wide {
+  letter-spacing: 0.06em;
+}
+
+
+/* ============================================================
+   UTILITIES
+=============================================================== */
+.border-all {
+  border: 2px solid var(--border-hard) !important;
+  border-radius: var(--radius-card);
+}
+
+
+.soft-shadow {
+  box-shadow: var(--shadow);
+}
+
+
+.object-cover {
+  object-fit: cover;
+}
+
 
 /* Round all major sections & cards by default */
 #hero,
 #main-content,
 #social-links,
 #contact-row,
+#newsletter,
 .content-box,
 .contact-card,
 .hero-figure,
 .border-all {
   border-radius: var(--radius-card) !important;
-  overflow: hidden;                /* ensures images respect rounded corners */
+  overflow: hidden;
 }
+
 
 /* ============================================================
    HEADER & NAVBAR
 =============================================================== */
-.site-header{ background: lightgray } /* header matches page background */
+.site-header {
+  background: var(--emerald);
+  color: #f2ede4;
+  border-radius: var(--radius-card);
+}
 
-/* Logo wrapper box */
+
+/* Logo wrapper */
 .logo-box {
   width: 55px;
   height: 55px;
   overflow: hidden;
-  background: #f9f9f9;
+  background: #fdfaf3;
 }
 
-/* Actual logo image inside */
+
+/* Actual logo image */
 .logo-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* fits nicely inside box without cropping */
+  object-fit: contain;
 }
+
 
 /* Smaller logo on mobile */
 @media (max-width: 768px) {
-  .logo-box { width: 45px; height: 45px; }
+  .logo-box {
+    width: 45px;
+    height: 45px;
+  }
 }
 
-/* Nav link buttons */
-.nav-pill{
+
+.site-header .navbar-brand span {
+  color: #fdfaf3;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+
+.site-header .navbar-nav .nav-link {
+  color: #fdfaf3;
+}
+
+
+/* Nav pills */
+.nav-pill {
   border-radius: var(--radius-pill);
-  padding: .45rem 1rem;
-  font-size: .95rem;
-  color: #111;
-  transition: background .15s ease, color .15s ease;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+  color: #fdfaf3;
+  border-color: rgba(255, 255, 255, 0.65) !important;
+  background: transparent;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
 }
+
+
 .nav-pill:hover,
-.nav-pill.active{
-  background: #111;
-  color: #fff !important;
+.nav-pill.active {
+  background: #fdfaf3;
+  color: var(--emerald) !important;
+  transform: translateY(-1px);
 }
+
+
+/* Toggler */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
 
 /* ============================================================
    PAGE WRAPPER
-   This is the main centred "card" that contains all sections.
 =============================================================== */
 #page-wrapper {
-  max-width: 1500px;               /* overall site width (content area) */
-  margin: 0 auto;                  /* centers the wrapper */
-  padding-inline: 1.25rem;         /* left/right padding (gutters) */
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  background: var(--bg-page);            /* white interior on gray background */
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
 }
+
 
 /* Slightly adjust padding on mobile */
 @media (max-width: 768px) {
@@ -113,118 +184,206 @@ body.bg-body{
   }
 }
 
+
 /* Adds space between sections inside wrapper */
 #page-wrapper section {
   margin-bottom: 2rem;
 }
 
+
 /* ============================================================
    HERO SECTION
 =============================================================== */
-#hero{
+#hero {
   text-align: center;
   padding-block: var(--section-y);
 }
 
-/* Title text scaling with screen size */
-.hero-title{
-  font-size: clamp(1.7rem, 2.8vw + 1rem, 2.6rem);
+
+.hero-title {
+  font-size: clamp(1.8rem, 2.9vw + 1rem, 2.8rem);
   line-height: 1.2;
 }
 
+
 /* Paragraph width (improves readability) */
-.hero-lead{
+.hero-lead {
   max-width: var(--hero-measure);
   margin: 0 auto;
 }
 
-/* Hero image area (wider and rounded) */
-.hero-figure{
+
+/* Hero image area */
+.hero-figure {
   width: min(1100px, 96vw);
   height: clamp(180px, 28vw, 420px);
   border-radius: var(--radius-card);
   margin-inline: auto;
 }
 
+
+/* CTA buttons */
+.btn-primary {
+  background-color: var(--emerald);
+  border-color: var(--emerald);
+}
+
+
+.btn-primary:hover {
+  background-color: var(--emerald-dark);
+  border-color: var(--emerald-dark);
+}
+
+
+.btn-outline-emerald {
+  background: transparent;
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+
+.btn-outline-emerald:hover {
+  background: var(--emerald);
+  color: #ffffff;
+}
+
+
 /* ============================================================
    WAVY DIVIDERS
-   These SVG shapes visually separate sections.
 =============================================================== */
-.section-wave{
+.section-wave {
   width: 100%;
   line-height: 0;
 }
-.section-wave svg{
+.section-wave svg {
   display: block;
   width: 100%;
-  height: 36px;                    /* reduced height = more subtle */
+  height: 36px;
 }
-.section-wave path{
+.section-wave path {
   fill: var(--wave-fill);
-  opacity: 0.55;                   /* makes waves light and elegant */
+  opacity: 0.16;
 }
-.wave-down{ margin-top: -2px; }
-.wave-up{
+.wave-down {
+  margin-top: -2px;
+}
+.wave-up {
   margin-bottom: -4px;
   transform: rotate(180deg);
 }
 
+
 /* ============================================================
    MAIN CONTENT AREA
 =============================================================== */
-#main-content{
+#main-content {
   padding-block: var(--section-y);
-  background: #fff;
+  background: #ffffff;
 }
-.content-box{
-  max-width: min(1100px, 96vw);    /* slightly wider for less empty space */
+
+
+.content-box {
+  max-width: min(1100px, 96vw);
   margin-inline: auto;
+  background: #f9f6ef;
 }
-#main-content p{
-  text-align: center;
-  line-height: 1.65;
+
+
+#main-content p {
+  text-align: left;
+  line-height: 1.7;
 }
+
+
+/* ============================================================
+   STATS
+=============================================================== */
+.stats-row {
+  margin-top: 1.5rem;
+}
+
+
+.stat-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  text-align: left;
+}
+
+
+.stat-label {
+  letter-spacing: 0.08em;
+}
+
+
+.stat-value {
+  font-weight: 600;
+}
+
 
 /* ============================================================
    SOCIAL LINKS SECTION
 =============================================================== */
-#social-links{
+#social-links {
   text-align: center;
-  background: #fff;
+  background: #ffffff;
 }
 
+
 /* Each social button */
-.social-link{
-  font-size: .9rem;
+.social-link {
+  font-size: 0.9rem;
   text-decoration: none;
-  background: #fff;
-  padding: .4rem 1rem;
+  background: #ffffff;
+  padding: 0.4rem 1rem;
   border-radius: var(--radius-soft);
-  color: #000;
-  transition: background .15s ease;
+  color: var(--emerald);
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
 }
-.social-link:hover{
-  background: #f4f4f4;
+.social-link:hover {
+  background: var(--emerald);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
+
 
 /* ============================================================
    CONTACT SECTION
 =============================================================== */
-#contact-row{ background: #fff; }
-.contact-card{
-  background: #fff;
+#contact-row {
+  background: #ffffff;
+}
+.contact-card {
+  background: #fdfaf3;
   border-radius: var(--radius-card);
   overflow: hidden;
 }
 
+
+/* ============================================================
+   NEWSLETTER SECTION
+=============================================================== */
+#newsletter {
+  background: #ffffff;
+  text-align: left;
+}
+
+
+#newsletter h3 {
+  font-size: 1.4rem;
+}
+
+
 /* ============================================================
    FOOTER
 =============================================================== */
-.site-footer{ background: var(--bg-page); }
+.site-footer {
+  background: var(--bg-page);
+  border-radius: var(--radius-card);
+}
+
 
 /* ============================================================
    CONTAINER GUTTERS
-   Reduces Bootstrap's default side padding for tighter layout
 =============================================================== */
 .container,
 .container-sm,
@@ -236,11 +395,34 @@ body.bg-body{
   padding-right: 0.85rem !important;
 }
 
+
+/* ============================================================
+   ANIMATIONS & INTERACTIONS
+=============================================================== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* ============================================================
    ACCESSIBILITY: Reduced Motion
-   Disables animations for users who prefer static interfaces.
 =============================================================== */
-@media (prefers-reduced-motion: reduce){
-  *{ animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
+
+
+
+
 
