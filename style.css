@@ -1,33 +1,27 @@
-
 /* ============================================================
    TOKENS & GLOBAL VARIABLES
    Emerald Roots colour system and shared design tokens
 =============================================================== */
 :root {
   /* Core colours */
-  --emerald: #1f5b3d;              /* primary accent: deep, earthy green */
-  --emerald-dark: #17412c;
+  --emerald: #18452e;              /* slightly deeper, earthier green */
+  --emerald-dark: #103021;
   --bg-page: #f2ede4;              /* warm off-white background */
   --text: #2b312d;                 /* main text colour */
 
-
-  --border-hard: rgba(10, 40, 25, 0.25); /* softened dark border */
+  --border-hard: rgba(16, 48, 33, 0.25);
   --shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
 
   --radius-m: 16px;
   --radius-card: 14px;
   --radius-soft: 11px;
   --radius-pill: 999px;
 
-
   --hero-measure: 80ch;
   --section-y: clamp(2rem, 4vw, 4rem);
 
-
-  --wave-fill: #1f5b3d; /* emerald tone for waves */
+  --wave-fill: var(--emerald);     /* waves use the same emerald green */
 }
-
 
 /* ============================================================
    GLOBAL LAYOUT
@@ -39,18 +33,15 @@ body.bg-body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-
 /* Small helper to tint text emerald */
 .text-emerald {
   color: var(--emerald);
 }
 
-
 /* Letter spacing helper */
 .tracking-wide {
   letter-spacing: 0.06em;
 }
-
 
 /* ============================================================
    UTILITIES
@@ -60,16 +51,13 @@ body.bg-body {
   border-radius: var(--radius-card);
 }
 
-
 .soft-shadow {
   box-shadow: var(--shadow);
 }
 
-
 .object-cover {
   object-fit: cover;
 }
-
 
 /* Round all major sections & cards by default */
 #hero,
@@ -85,16 +73,14 @@ body.bg-body {
   overflow: hidden;
 }
 
-
 /* ============================================================
    HEADER & NAVBAR
 =============================================================== */
 .site-header {
-  background: var(--emerald);
+  background: linear-gradient(120deg, var(--emerald), #205f3a);
   color: #f2ede4;
   border-radius: var(--radius-card);
 }
-
 
 /* Logo wrapper */
 .logo-box {
@@ -104,14 +90,12 @@ body.bg-body {
   background: #fdfaf3;
 }
 
-
 /* Actual logo image */
 .logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-
 
 /* Smaller logo on mobile */
 @media (max-width: 768px) {
@@ -121,7 +105,6 @@ body.bg-body {
   }
 }
 
-
 .site-header .navbar-brand span {
   color: #fdfaf3;
   font-weight: 600;
@@ -130,11 +113,9 @@ body.bg-body {
   font-size: 0.95rem;
 }
 
-
 .site-header .navbar-nav .nav-link {
   color: #fdfaf3;
 }
-
 
 /* Nav pills */
 .nav-pill {
@@ -147,7 +128,6 @@ body.bg-body {
   transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
 }
 
-
 .nav-pill:hover,
 .nav-pill.active {
   background: #fdfaf3;
@@ -155,12 +135,10 @@ body.bg-body {
   transform: translateY(-1px);
 }
 
-
 /* Toggler */
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.7);
 }
-
 
 /* ============================================================
    PAGE WRAPPER
@@ -175,7 +153,6 @@ body.bg-body {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
 }
 
-
 /* Slightly adjust padding on mobile */
 @media (max-width: 768px) {
   #page-wrapper {
@@ -184,12 +161,10 @@ body.bg-body {
   }
 }
 
-
 /* Adds space between sections inside wrapper */
 #page-wrapper section {
   margin-bottom: 2rem;
 }
-
 
 /* ============================================================
    HERO SECTION
@@ -199,19 +174,30 @@ body.bg-body {
   padding-block: var(--section-y);
 }
 
+/* circular logo in hero */
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo-img {
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fdfaf3;
+}
 
 .hero-title {
   font-size: clamp(1.8rem, 2.9vw + 1rem, 2.8rem);
   line-height: 1.2;
 }
 
-
 /* Paragraph width (improves readability) */
 .hero-lead {
   max-width: var(--hero-measure);
   margin: 0 auto;
 }
-
 
 /* Hero image area */
 .hero-figure {
@@ -221,19 +207,16 @@ body.bg-body {
   margin-inline: auto;
 }
 
-
 /* CTA buttons */
 .btn-primary {
   background-color: var(--emerald);
   border-color: var(--emerald);
 }
 
-
 .btn-primary:hover {
   background-color: var(--emerald-dark);
   border-color: var(--emerald-dark);
 }
-
 
 .btn-outline-emerald {
   background: transparent;
@@ -241,12 +224,10 @@ body.bg-body {
   color: var(--emerald);
 }
 
-
 .btn-outline-emerald:hover {
   background: var(--emerald);
   color: #ffffff;
 }
-
 
 /* ============================================================
    WAVY DIVIDERS
@@ -262,7 +243,7 @@ body.bg-body {
 }
 .section-wave path {
   fill: var(--wave-fill);
-  opacity: 0.16;
+  opacity: 0.45;   /* more visible, same green tone */
 }
 .wave-down {
   margin-top: -2px;
@@ -272,28 +253,24 @@ body.bg-body {
   transform: rotate(180deg);
 }
 
-
 /* ============================================================
    MAIN CONTENT AREA
 =============================================================== */
 #main-content {
   padding-block: var(--section-y);
-  background: #ffffff;
+  background: #f7fbf8; /* gentle green tint for variety */
 }
-
 
 .content-box {
   max-width: min(1100px, 96vw);
   margin-inline: auto;
-  background: #f9f6ef;
+  background: #f9f3e5; /* warm parchment tint */
 }
-
 
 #main-content p {
   text-align: left;
   line-height: 1.7;
 }
-
 
 /* ============================================================
    STATS
@@ -302,55 +279,53 @@ body.bg-body {
   margin-top: 1.5rem;
 }
 
-
 .stat-card {
   background: #ffffff;
   border-radius: var(--radius-card);
   text-align: left;
 }
 
-
 .stat-label {
   letter-spacing: 0.08em;
 }
 
-
 .stat-value {
   font-weight: 600;
 }
-
 
 /* ============================================================
    SOCIAL LINKS SECTION
 =============================================================== */
 #social-links {
   text-align: center;
-  background: #ffffff;
+  background: #f2faf5;
 }
-
 
 /* Each social button */
 .social-link {
   font-size: 0.9rem;
   text-decoration: none;
   background: #ffffff;
-  padding: 0.4rem 1rem;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-soft);
   color: var(--emerald);
-  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 .social-link:hover {
   background: var(--emerald);
   color: #ffffff;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
 
 /* ============================================================
    CONTACT SECTION
 =============================================================== */
 #contact-row {
-  background: #ffffff;
+  background: #f7fbf8;
 }
 .contact-card {
   background: #fdfaf3;
@@ -358,20 +333,29 @@ body.bg-body {
   overflow: hidden;
 }
 
-
 /* ============================================================
    NEWSLETTER SECTION
 =============================================================== */
 #newsletter {
-  background: #ffffff;
+  background: #f9f2e8;
   text-align: left;
 }
-
 
 #newsletter h3 {
   font-size: 1.4rem;
 }
 
+.newsletter-card {
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+/* smaller, slightly uppercase labels for structure */
+.form-label-small {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
 
 /* ============================================================
    FOOTER
@@ -380,7 +364,6 @@ body.bg-body {
   background: var(--bg-page);
   border-radius: var(--radius-card);
 }
-
 
 /* ============================================================
    CONTAINER GUTTERS
@@ -395,7 +378,6 @@ body.bg-body {
   padding-right: 0.85rem !important;
 }
 
-
 /* ============================================================
    ANIMATIONS & INTERACTIONS
 =============================================================== */
@@ -405,12 +387,10 @@ body.bg-body {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* ============================================================
    ACCESSIBILITY: Reduced Motion
@@ -421,8 +401,6 @@ body.bg-body {
     transition: none !important;
   }
 }
-
-
 
 
 
