@@ -1,460 +1,206 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Emerald Roots — Agroforestry for a Greener Ireland</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Roots</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
 
-    <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+<header class="navbar">
+    <div class="container">
+        <h2 class="logo">
+            <img src="./img/erLog.png" alt="" width="50">Emerald Roots
+        </h2>
 
-    <!-- Bootstrap Icons for social media icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+        <nav class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="activities.html">Our fields of activities</a>
+            <a href="#">Our Mission</a>
+             <a href="#">Get involved</a>
+            <a href="#">Projects</a>
+             
+            
+        </nav>
+    </div>
+</header>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body class="bg-body text-center">
-    <!-- HEADER / NAV -->
-    <header class="site-header border-all soft-shadow py-2 py-md-3">
-      <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary">
-        <div class="container-xxl d-flex justify-content-between align-items-center">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <!-- Logo -->
-            <span class="logo-box border-all d-flex align-items-center justify-content-center">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1732775543535-bba27e33fee0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2532"
-                alt="Emerald Roots Logo"
-                class="logo-img"
-              />
-            </span>
-            <span>Emerald Roots</span>
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-            aria-controls="mainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="mainNav">
-            <ul class="navbar-nav gap-2 gap-md-3">
-              <li class="nav-item">
-                <a class="nav-link nav-pill border-all active" href="index.html">Home</a>
-              </li>
-              <li class="nav-item"><a class="nav-link nav-pill border-all" href="about_us.html">About Us</a></li>
-              <li class="nav-item"><a class="nav-link nav-pill border-all" href="activities.html">Activities</a></li>
-              <li class="nav-item"><a class="nav-link nav-pill border-all" href="get_involved.html">Get Involved</a></li>
-              <li class="nav-item"><a class="nav-link nav-pill border-all" href="our_mission.html">Our Mission</a></li>
-            </ul>
-          </div>
+<section class="main">
+    <div class="main-content container">
+        <div class="text-content">
+            <h1>Plant a Tree,<br> Shape the Future</h1>
+            <p>Every tree we plant helps restore forests, protect wildlife, and create a healthier planet for future generations.</p>
+            <br>
+            <a href="https://www.google.com" class="btn btn-green">Join the Mission</a>
         </div>
-      </nav>
-    </header>
 
-    <!-- PAGE WRAPPER CARD -->
-    <main id="page-wrapper" class="border-light shadow-sm">
-      <!-- HERO (top card) -->
-      <section id="hero" class="py-5 bg-white border-all soft-shadow" data-reveal>
-        <div class="container-xxl">
-          <p class="text-uppercase small mb-2 text-emerald fw-semibold tracking-wide">
-            Agroforestry for a climate-resilient Ireland
-          </p>
-
-          <!-- logo image centred above title, using div background -->
-          <div class="hero-logo-wrapper mb-3">
-            <div class="hero-logo-shell border-all">
-              <div class="hero-logo-img"></div>
-            </div>
-          </div>
-
-          <h1 class="mb-3 hero-title">
-            Emerald Roots
-          </h1>
-
-          <!-- Forest image ABOVE CTA -->
-          <figure
-            class="mx-auto mb-3 hero-figure border-all overflow-hidden"
-            style="max-width: 1200px;"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-              alt="Native forest in Ireland"
-              class="w-100 h-100 object-cover"
-            />
-          </figure>
-
-          <p class="lead mx-auto hero-lead">
-            Emerald Roots is a student-led agroforestry initiative supporting farmers, communities,
-            and campuses to plant diverse native trees, restore soils, and build climate resilience
-            across Ireland.
-          </p>
-          <p class="hero-lead mx-auto mt-2 small text-muted">
-            We co-design simple, practical planting plans and connect volunteers with farms that
-            are ready to experiment with climate-smart practices.
-          </p>
-
-          <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-4">
-            <a href="#newsletter" class="btn btn-primary rounded-pill px-4 border-all">
-              Join our newsletter
-            </a>
-            <a href="get_involved.html" class="btn btn-outline-emerald rounded-pill px-4 border-all">
-              Explore volunteer days
-            </a>
-          </div>
+        <div class="main-image">
+            <img src="./img/tree.jpg" alt="">
         </div>
-      </section>
+    </div>
+</section>
 
-      <!-- Wave divider (down) -->
-      <div class="section-wave wave-down" aria-hidden="true">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-          <path d="M0,40 C240,90 480,0 720,50 C960,100 1200,30 1440,70 L1440,100 L0,100 Z"></path>
-        </svg>
-      </div>
+<!-- Banner full-width -->
+<section class="banner-image">
+    <img id="banner-trigger" src="./img/home00.png" alt="">
+   <div id="scroll-reveal" class="hidden-text banner-text">
+        <h2>Forests Are Disappearing</h2>
+        <p>
+            Every year, more than 10 million hectares of forest are lost due to illegal logging,
+            agriculture expansion, and uncontrolled fires. Restoring forests is essential to protect
+            biodiversity, stabilize the climate, and preserve clean air and water.
+        </p>
+    </div>
+</section>
 
-      <!-- MAIN CONTENT (second card) -->
-      <section id="main-content" class="py-5 border-all soft-shadow" data-reveal>
-        <div class="container-xxl">
-          <h2 class="h4 mb-4">Why agroforestry matters</h2>
+<section class="info-section">
+    <div class="container">
+        <h2>Why Reforest?</h2>
+        <p>
+            Trees regulate temperature, store carbon, prevent soil erosion, and provide habitat for over 80% of terrestrial species.
+            Reforestation is one of the most effective natural solutions against climate change.
+        </p>
+    </div>
+</section>
 
-          <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 rounded-4 border-all">
-            <p class="text-muted mb-4">
-              Agroforestry blends trees, crops, and livestock on the same piece of land. Done well,
-              it restores biodiversity, protects waterways, and helps farmers stay productive in a
-              changing climate. Instead of single-species plantations, we focus on mixed native
-              woodlands that work with local soils and communities.
-            </p>
-
-            <!-- Regenerative ag image -->
-            <figure
-              class="ratio ratio-16x9 border-all overflow-hidden rounded-3 mx-auto"
-              style="max-width: 1200px;"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1492496913980-501348b61469?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-                alt="Agroforestry landscape with mixed trees and crops"
-                class="w-100 h-100 object-cover"
-              />
-            </figure>
-
-            <p class="mt-4 text-start text-md-center">
-              Forest restoration is more than planting rows of trees. Our projects aim to rebuild
-              living ecosystems: layered canopies, healthy soils, and thriving wildlife corridors.
-              We prioritise native species, collaborate with local farmers and community groups, and
-              use each site as a living classroom for students to learn monitoring, mapping, and
-              long-term stewardship.
-            </p>
-
-            <!-- Animated stats -->
-            <div class="row g-3 mt-4 stats-row">
-              <div class="col-12 col-md-4">
-                <div class="stat-card border-all h-100 py-3 px-3">
-                  <div class="stat-label small text-uppercase text-muted mb-1">
-                    Native trees planted
-                  </div>
-                  <div class="stat-value h3 mb-0">
-                    <span data-count="42000">0</span>+
-                  </div>
-                  <p class="small text-muted mb-0">
-                    Across pilot sites in Galway, Clare, and Mayo.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="stat-card border-all h-100 py-3 px-3">
-                  <div class="stat-label small text-uppercase text-muted mb-1">
-                    Student volunteers
-                  </div>
-                  <div class="stat-value h3 mb-0">
-                    <span data-count="280">0</span>+
-                  </div>
-                  <p class="small text-muted mb-0">
-                    Learning field skills while supporting real farms.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="stat-card border-all h-100 py-3 px-3">
-                  <div class="stat-label small text-uppercase text-muted mb-1">
-                    Hectares under restoration
-                  </div>
-                  <div class="stat-value h3 mb-0">
-                    <span data-count="65">0</span>+
-                  </div>
-                  <p class="small text-muted mb-0">
-                    From riparian buffers to shelterbelts and food forests.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Wave divider (up) -->
-      <div class="section-wave wave-up" aria-hidden="true">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-          <path d="M0,70 C240,30 480,100 720,50 C960,0 1200,90 1440,40 L1440,0 L0,0 Z"></path>
-        </svg>
-      </div>
-
-      <!-- SOCIAL LINKS -->
-      <section id="social-links" class="py-4 border-all soft-shadow" data-reveal>
-        <div class="container-xxl">
-          <h3 class="h6 fw-semibold mb-3">Follow Emerald Roots</h3>
-          <div class="d-flex justify-content-center flex-wrap gap-2">
-            <a href="#" class="social-link border-all">
-              <i class="bi bi-facebook me-1"></i> Facebook
-            </a>
-            <a href="#" class="social-link border-all">
-              <i class="bi bi-linkedin me-1"></i> LinkedIn
-            </a>
-            <a href="#" class="social-link border-all">
-              <i class="bi bi-instagram me-1"></i> Instagram
-            </a>
-            <a href="#" class="social-link border-all">
-              <i class="bi bi-twitter-x me-1"></i> X
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT ROW (centered) -->
-      <section id="contact-row" class="py-4 border-all soft-shadow" data-reveal>
-        <div class="container-xxl">
-          <div class="row gy-3 justify-content-center">
-            <div class="col-12 col-md-4 col-lg-3">
-              <div class="contact-card border-all rounded-3 p-3 h-100">
-                <div class="fw-semibold mb-1">📧 Email</div>
-                <div class="text-muted small">hello@emeraldroots.ie</div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3">
-              <div class="contact-card border-all rounded-3 p-3 h-100">
-                <div class="fw-semibold mb-1">📞 Phone</div>
-                <div class="text-muted small">+353 (0)91 123 456</div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3">
-              <div class="contact-card border-all rounded-3 p-3 h-100">
-                <div class="fw-semibold mb-1">📍 Address</div>
-                <div class="text-muted small">Campus Green Hub, Co. Galway</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- NEWSLETTER SIGNUP (third section) -->
-      <section id="newsletter" class="py-5 border-all soft-shadow" data-reveal>
-        <div class="container-xxl">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7">
-              <div class="newsletter-card border-all soft-shadow p-4 p-md-5">
-                <h3 class="mb-3 text-center">Stay rooted with our newsletter</h3>
-                <p class="text-muted mb-4 text-center">
-                  Get seasonal agroforestry tips, project updates, and calls for volunteers straight
-                  to your inbox. Perfect for students, farmers, and anyone curious about climate-smart
-                  land use.
+<!-- ONBOARDING SECTIONS -->
+<section class="onboarding-container container">
+    <div class="onboarding-text">
+        <h2>Understanding Deforestation</h2>
+        <p class="subtitle">Human activity is the main cause of forest loss worldwide.</p>
+        <div class="onboarding-step">
+            <div class="step-number"><img src="./img/erLog.png" alt="" width="50"></div>
+            <div class="step-content">
+                <h3>Agricultural Expansion</h3>
+                <p>
+                    70% of global deforestation is caused by converting forests into farmland, mostly for livestock and soy cultivation.
                 </p>
-
-                <form class="needs-validation" novalidate>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label for="newsletterName" class="form-label form-label-small">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="newsletterName"
-                        placeholder="Alex Murphy"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Please enter your name.
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label for="newsletterEmail" class="form-label form-label-small">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="newsletterEmail"
-                        placeholder="you@example.com"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Please enter a valid email address.
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="newsletterInterest" class="form-label form-label-small">
-                        What are you most interested in?
-                      </label>
-                      <select class="form-select" id="newsletterInterest" required>
-                        <option value="" selected disabled>Choose one...</option>
-                        <option value="farmer">Support for farmers &amp; landowners</option>
-                        <option value="student">Student &amp; research updates</option>
-                        <option value="events">Workshops &amp; volunteering days</option>
-                        <option value="policy">Policy &amp; funding news</option>
-                      </select>
-                      <div class="invalid-feedback">
-                        Please choose an area of interest.
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="newsletterNotes" class="form-label form-label-small">
-                        Optional: Tell us a little about your context
-                      </label>
-                      <textarea
-                        class="form-control"
-                        id="newsletterNotes"
-                        rows="3"
-                        placeholder="For example: 20ha beef farm in Clare, or environmental science student in NUIG."
-                      ></textarea>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-check text-start checkbox-card border-all p-2">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="newsletterConsent"
-                          required
-                        />
-                        <label class="form-check-label" for="newsletterConsent">
-                          I agree to receive emails from Emerald Roots and understand I can unsubscribe at
-                          any time.
-                        </label>
-                        <div class="invalid-feedback">
-                          Please confirm you’re happy to hear from us.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 text-start text-md-end">
-                      <button class="btn btn-primary rounded-pill px-4" type="submit">
-                        Sign up
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
-    </main>
+    </div>
+    <div class="onboarding-image">
+        <img src="./img/home7.jpg" alt="">
+        <p class="image-text">Forests protect the soil and prevent desertification.</p>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer py-3 text-muted border-all soft-shadow">
-      <div class="container-xxl">
-        <small>
-          © <span data-year>2025</span> Emerald Roots. Created as an academic project.
-        </small>
-      </div>
-    </footer>
+<section class="onboarding-container container">
+    <div class="onboarding-text">
+        <h2>Why Action Is Urgent</h2>
+        <p class="subtitle">Without healthy forests, life on Earth becomes unsustainable.</p>
+        <div class="onboarding-step">
+            <div class="step-number"><img src="./img/erLog.png" alt="" width="50"></div>
+            <div class="step-content">
+                <h3>Loss of Biodiversity</h3>
+                <p>Thousands of species lose their habitat each year. Restoring forests helps wildlife recover and ensures ecosystem balance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="onboarding-image">
+        <img src="./img/home8.jpg" alt="">
+        <p class="image-text">Healthy forests support 80% of terrestrial biodiversity.</p>
+    </div>
+</section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+<section class="onboarding-container container">
+    <div class="onboarding-text">
+        <h2>What We Do</h2>
+        <p class="subtitle">Our mission is simple: restore life where it has disappeared.</p>
+        <div class="onboarding-step">
+            <div class="step-number"><img src="./img/erLog.png" alt="" width="50"></div>
+            <div class="step-content">
+                <h3>Reforestation & Community Work</h3>
+                <p>We plant native trees, support local communities, and protect natural habitats to create long-term ecological resilience.</p>
+            </div>
+        </div>
+    </div>
+    <div class="onboarding-image">
+        <img src="./img/home9.png" alt="">
+        <p class="image-text">Every tree planted restores balance to the planet.</p>
+    </div>
+</section>
 
-    <!-- Custom JS: scroll reveal, counters, validation, dynamic year -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // Scroll reveal on sections
-        const revealEls = document.querySelectorAll('[data-reveal]');
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-visible');
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.15 }
-        );
+<!-- NEW SECTIONS ABOUT DEFORESTATION -->
+<section class="impact-section container">
+    <h2>Global Impact of Deforestation</h2>
+    <div class="impact-cards">
+        <div class="card">
+            <h3>20 fields/minute</h3>
+            <p>This is the amount of forest lost every minute worldwide.</p>
+        </div>
+        <div class="card">
+            <h3>CO₂</h3>
+            <p>Deforestation produces more CO₂ emissions than all cars and airplanes combined.</p>
+        </div>
+        <div class="card">
+            <h3>Biodiversity</h3>
+            <p>More than 80% of terrestrial species depend on forests to survive.</p>
+        </div>
+    </div>
+</section>
 
-        revealEls.forEach((el) => revealObserver.observe(el));
+<section class="benefits-section container">
+    <h2>Benefits of Reforestation</h2>
+    <div class="benefit-cards">
+        <div class="benefit-card">🌱 Clean the air</div>
+        <div class="benefit-card">🌧️ Regulate rainfall</div>
+        <div class="benefit-card">🏞️ Restore soils</div>
+        <div class="benefit-card">🐾 Provide habitat for wildlife</div>
+        <div class="benefit-card">🌡️ Reduce global warming</div>
+    </div>
+</section>
 
-        // Animated stats counters
-        function animateCounter(el) {
-          const target = parseInt(el.dataset.count, 10);
-          const duration = 1800;
-          let startTime = null;
 
-          function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const value = Math.floor(progress * target);
-            el.textContent = value.toLocaleString();
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            }
-          }
 
-          window.requestAnimationFrame(step);
-        }
+<section class="before-after-section container">
+    <h2>Before and After Reforestation</h2>
+    <div class="before-after-images">
+        <div class="image-pair">
+            <img src="./img/before.png" alt="Before reforestation">
+            <p>Before: Degraded and lifeless land.</p>
+        </div>
+        <div class="image-pair">
+            <img src="./img/after.png" alt="After reforestation">
+            <p>After: Restored and biodiverse area.</p>
+        </div>
+        
+    </div>
+   
+</section>
+    <section class="counter-section container">
+    
+    <h2>Trees Planted</h2>
+    <p id="tree-counter">0</p>
+</section>
+    
+    <section class="help-section container">
+    <h2>How You Can Help</h2>
+    <ul>
+        <li>🌳 Donate to reforestation projects</li>
+        <li>🌿 Sponsor a tree</li>
+        <li>👨‍👩‍👧 Participate in planting events</li>
+        <li>📄 Reduce paper and meat consumption</li>
+        <li>📢 Spread awareness about the importance of forests</li>
+    </ul>
+      <h1>
+  <a href="https://www.google.com" class="btn btn-dark">Donate Now</a>
+</h1>
 
-        const counters = document.querySelectorAll('[data-count]');
-        const counterObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && !entry.target.dataset.animated) {
-                animateCounter(entry.target);
-                entry.target.dataset.animated = 'true';
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.6 }
-        );
+</section>
+    
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Emerald Roots. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Use</a> | 
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</footer>
 
-        counters.forEach((el) => counterObserver.observe(el));
-
-        // Bootstrap form validation for newsletter
-        const forms = document.querySelectorAll('.needs-validation');
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            'submit',
-            (event) => {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            },
-            false
-          );
-        });
-
-        // Dynamic footer year
-        const yearSpan = document.querySelector('[data-year]');
-        if (yearSpan) {
-          yearSpan.textContent = new Date().getFullYear();
-        }
-      });
-    </script>
-  </body>
+<script src="./js/script.js"></script>
+</body>
 </html>
-
