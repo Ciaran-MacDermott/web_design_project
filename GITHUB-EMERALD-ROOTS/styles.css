@@ -1,0 +1,50 @@
+
+/* GLOBAL STYLES */
+body {
+    background-color: #F2EDE4; /* Off-white background */
+    color: #1F5B3D;           /* Emerald green text */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, BlinkMacSystemFont,
+                 'Segoe UI', sans-serif;
+    padding-block: 1.5rem;
+}
+
+/* Give spacing to sections */
+section {
+    padding-block: 1.5rem;
+    border-bottom: 1px solid #1F5B3D20; /* very light green line */
+}
+
+/* Navbar override for your custom colour theme */
+.custom-nav {
+    background-color: #1F5B3D !important;
+}
+
+
+/* Logo styling */
+.logo-img {
+    height: 45px;     /* Adjust as needed */
+    width: auto;
+}
+
+/* Headings styled in green */
+h1, h2, h3 {
+    color: #1F5B3D;
+    font-weight: 600;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1F5B3D10;
+}
+
+/* Uniform image class for all sections */
+.uniform-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.justify-text {
+    text-align: justify;
+}
+
