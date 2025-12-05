@@ -42,7 +42,7 @@ body.bg-body{
 #page-wrapper {
   max-width: 1500px;
   margin: 0 auto;
-  padding-inline: 0.25rem; 
+  padding-inline: 2.5rem; 
   border-radius: 0;
   background: var(--bg-page);
   box-shadow: 0 3px 15px rgba(0,0,0,0.05);
