@@ -1,38 +1,27 @@
-
 /* ============================================================
    TOKENS & GLOBAL VARIABLES
 =============================================================== */
 :root{
-  --bg-page: #78866B;              /* outer page background (muted green) */
+  --bg-page: #78866B;              /* overall page background (muted green) */
   --text: #333;
   --shadow: 0 3px 12px rgba(0,0,0,.08);
+
+
+
 
   --radius-pill: 999px;
   --hero-measure: 80ch;
   --section-y: clamp(2rem, 4vw, 4rem);
 
-  --wave-fill: #ffffff;            /* wave + section background */
+
+
+
+  --wave-fill: #ffffff;            /* color for divider waves (card color) */
   --emerald: #276749;              /* primary green */
   --emerald-deep: #1f4f38;         /* darker green for navbar/footer */
 }
 
-/* GLOBAL LAYOUT */
-body{
-  background: var(--bg-page);      /* green gutters again */
-  color: var(--text);
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
 
-/* Page wrapper: same green as body so it all feels like one frame */
-#page-wrapper {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding-inline: 1.25rem;
-  background: var(--bg-page);      /* no ivory layer */
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-}
 
 
 /* ============================================================
@@ -48,15 +37,34 @@ body.bg-body{
 
 
 
+
+/* Page wrapper */
+#page-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+  background: var(--bg-page);
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+
+
+
 /* Space between sections inside wrapper */
 #page-wrapper section {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
+
+
+
 
 /* Last section sits closer to footer */
 #page-wrapper section:last-child {
   margin-bottom: 0;
 }
+
+
+
 
 /* Containers: slightly tighter default gutters */
 .container,
@@ -65,13 +73,19 @@ body.bg-body{
 .container-lg,
 .container-xl,
 .container-xxl {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
+  padding-left: 0.85rem !important;
+  padding-right: 0.85rem !important;
 }
+
+
+
 
 /* Simple helpers */
 .soft-shadow{ box-shadow: var(--shadow); }
 .object-cover{ object-fit: cover; }
+
+
+
 
 .text-emerald{
   color: var(--emerald);
@@ -79,6 +93,9 @@ body.bg-body{
 .tracking-wide{
   letter-spacing: .18em;
 }
+
+
+
 
 /* ============================================================
    HEADER & NAVBAR
@@ -89,11 +106,17 @@ body.bg-body{
   padding-block: .5rem;
 }
 
-/* On scroll (used by JS) */
+
+
+
+/* On scroll (used by JS later) */
 .site-header-scrolled{
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
   padding-block: .25rem;
 }
+
+
+
 
 /* Logo box in navbar */
 .logo-box {
@@ -105,9 +128,15 @@ body.bg-body{
   transition: transform .25s ease;
 }
 
+
+
+
 .site-header-scrolled .logo-box{
   transform: scale(0.9);
 }
+
+
+
 
 /* Actual logo image inside nav */
 .logo-img {
@@ -116,10 +145,16 @@ body.bg-body{
   object-fit: contain;
 }
 
+
+
+
 /* Smaller logo on mobile */
 @media (max-width: 768px) {
   .logo-box { width: 45px; height: 45px; }
 }
+
+
+
 
 /* Inline logo in hero tagline */
 .hero-logo-inline{
@@ -133,6 +168,9 @@ body.bg-body{
     width: 40px;
   }
 }
+
+
+
 
 /* Nav link buttons */
 .nav-pill{
@@ -148,6 +186,9 @@ body.bg-body{
   color: #111 !important;
 }
 
+
+
+
 /* ============================================================
    HERO SECTION
 =============================================================== */
@@ -156,6 +197,9 @@ body.bg-body{
   padding-block: var(--section-y);
   background: #fff;
 }
+
+
+
 
 /* Big logo above title */
 .hero-logo-main{
@@ -168,13 +212,19 @@ body.bg-body{
   object-fit: contain;
 }
 
+
+
+
 /* Title text */
 .hero-title{
   line-height: 1.2;
   text-align: center;
 }
 
-/* Main site name: same family as tagline, in green */
+
+
+
+/* Main site name: same family as tagline */
 .hero-title-main{
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
@@ -185,7 +235,10 @@ body.bg-body{
   margin-top: 0.25rem;
 }
 
-/* Sub heading: more elegant serif, less “childish” */
+
+
+
+/* Sub heading: more elegant serif */
 .hero-title-sub{
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -194,11 +247,17 @@ body.bg-body{
   letter-spacing: .03em;
 }
 
+
+
+
 /* Hero text width */
 .hero-lead{
   max-width: var(--hero-measure);
   margin: 0 auto;
 }
+
+
+
 
 /* Hero image area */
 .hero-figure{
@@ -206,6 +265,9 @@ body.bg-body{
   height: clamp(180px, 28vw, 420px);
   margin-inline: auto;
 }
+
+
+
 
 /* ============================================================
    WAVY DIVIDERS
@@ -229,10 +291,16 @@ body.bg-body{
   transform: rotate(180deg);
 }
 
+
+
+
 /* Top wave just under navbar, green behind it */
 .wave-top{
   background: var(--bg-page);
 }
+
+
+
 
 /* ============================================================
    MAIN CONTENT AREA
@@ -245,6 +313,9 @@ body.bg-body{
   max-width: min(1100px, 96vw);
   margin-inline: auto;
 }
+
+
+
 
 /* Body text and lists in main content */
 #main-content p{
@@ -261,6 +332,9 @@ body.bg-body{
   margin-bottom: .35rem;
   line-height: 1.6;
 }
+
+
+
 
 /* Stats styling */
 .stats-row{
@@ -280,12 +354,18 @@ body.bg-body{
   font-size: 1.7rem;
 }
 
+
+
+
 /* ============================================================
    NEWSLETTER SECTION
 =============================================================== */
 #newsletter{
   background: #fff;
 }
+
+
+
 
 /* ============================================================
    CONNECT SECTION
@@ -294,6 +374,9 @@ body.bg-body{
   background: #fff;
   text-align: center;
 }
+
+
+
 
 /* Social buttons */
 .social-link{
@@ -315,11 +398,17 @@ body.bg-body{
   box-shadow: 0 2px 5px rgba(0,0,0,.08);
 }
 
+
+
+
 /* Contact cards */
 .contact-card{
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,.04);
 }
+
+
+
 
 /* Map embed */
 .map-wrapper{
@@ -334,6 +423,9 @@ body.bg-body{
   display: block;
 }
 
+
+
+
 /* ============================================================
    BUTTONS
 =============================================================== */
@@ -347,6 +439,9 @@ body.bg-body{
   color: #fff;
 }
 
+
+
+
 /* ============================================================
    FOOTER
 =============================================================== */
@@ -355,6 +450,9 @@ body.bg-body{
   color: #f5f5f5;                    /* light text */
   text-align: center;
 }
+
+
+
 
 /* Make sure links in the footer are readable too (if you add any) */
 .site-footer a{
@@ -365,8 +463,11 @@ body.bg-body{
   text-decoration: underline;
 }
 
+
+
+
 /* ============================================================
-   BACK TO TOP BUTTON (created by JS)
+   BACK TO TOP BUTTON (created by JS later)
 =============================================================== */
 #backToTop {
   position: fixed;
@@ -386,9 +487,13 @@ body.bg-body{
   font-size: 1.1rem;
 }
 
+
+
+
 /* ============================================================
    ACCESSIBILITY: Reduced Motion
 =============================================================== */
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
 }
+
