@@ -4,7 +4,6 @@
 =============================================================== */
 :root{
   --bg-page: #78866B;              /* outer page background (muted green) */
-  --bg-wrapper: #f8f5ec;           /* inner wrapper / gutters (soft ivory) */
   --text: #333;
   --shadow: 0 3px 12px rgba(0,0,0,.08);
 
@@ -12,26 +11,26 @@
   --hero-measure: 80ch;
   --section-y: clamp(2rem, 4vw, 4rem);
 
-  --wave-fill: #ffffff;            /* color for divider waves (card color) */
+  --wave-fill: #ffffff;            /* wave + section background */
   --emerald: #276749;              /* primary green */
   --emerald-deep: #1f4f38;         /* darker green for navbar/footer */
 }
 
 /* GLOBAL LAYOUT */
-body.bg-body{
-  background: var(--bg-page);
+body{
+  background: var(--bg-page);      /* green gutters again */
   color: var(--text);
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Page wrapper */
+/* Page wrapper: same green as body so it all feels like one frame */
 #page-wrapper {
   max-width: 1500px;
   margin: 0 auto;
   padding-inline: 1.25rem;
-  background: var(--bg-wrapper);   /* <- now ivory instead of green */
+  background: var(--bg-page);      /* no ivory layer */
   box-shadow: 0 3px 15px rgba(0,0,0,0.05);
 }
 
