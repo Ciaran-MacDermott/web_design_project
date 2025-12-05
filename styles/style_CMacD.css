@@ -301,10 +301,23 @@ form .form-select:focus {
   border-radius: 8px;
 }
 
+
+
+/* Give the checkbox itself a clear border and bigger size */
 .form-check-input {
-  margin-left: -1.3rem;   /* pull the checkbox into the padded area nicely */
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #555 !important;     /* visible border */
+  border-radius: 4px !important;         /* slight rounding */
+  margin-top: 0.15rem;                   /* aligns with text */
+  cursor: pointer;
 }
 
+/* Green border when selected */
+.form-check-input:checked {
+  background-color: var(--emerald);
+  border-color: var(--emerald);
+}
 
 /* ============================================================
    DONATE SECTION
