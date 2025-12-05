@@ -8,22 +8,15 @@
   --shadow: 0 3px 12px rgba(0,0,0,.08);
 
 
-
-
   --radius-pill: 999px;
   --hero-measure: 80ch;
   --section-y: clamp(2rem, 4vw, 4rem);
-
-
 
 
   --wave-fill: #ffffff;            /* color for divider waves (card color) */
   --emerald: #276749;              /* primary green */
   --emerald-deep: #1f4f38;         /* darker green for navbar/footer */
 }
-
-
-
 
 /* ============================================================
    GLOBAL LAYOUT
