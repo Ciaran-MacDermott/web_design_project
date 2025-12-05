@@ -97,7 +97,7 @@ body.bg-body{
    HEADER & NAVBAR
 =============================================================== */
 .site-header{
-  background: var(--emerald-deep);
+  background: #b1e7c3;;
   transition: background .25s ease, box-shadow .25s ease, padding .25s ease;
   padding-block: .5rem;
 }
