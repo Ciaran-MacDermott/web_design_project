@@ -42,7 +42,8 @@ body.bg-body{
 #page-wrapper {
   max-width: 1500px;
   margin: 0 auto;
-  padding-inline: 1.25rem;
+  padding-inline: 0.5rem;   /* was 1.25rem – slimmer white rails */
+  border-radius: 0;
   background: var(--bg-page);
   box-shadow: 0 3px 15px rgba(0,0,0,0.05);
 }
@@ -50,18 +51,17 @@ body.bg-body{
 
 
 
+
 /* Space between sections inside wrapper */
 #page-wrapper section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-
-
-
-/* Last section sits closer to footer */
-#page-wrapper section:last-child {
-  margin-bottom: 0;
+/* But not on the last section, so it sits closer to the footer */
+#page-wrapper section:last-of-type {
+  margin-bottom: 0.5rem;  /* or 0 if you want it really tight */
 }
+
 
 
 
