@@ -463,6 +463,23 @@ form .form-select:focus {
 }
 
 /* ============================================================
+  DONATION POPUP WINDOW
+=============================================================== */
+/* Donation popup tree wiggle */
+.donate-icon{
+  animation: tree-celebrate 1.6s ease-in-out infinite;
+  font-size: 3.2rem;
+}
+
+@keyframes tree-celebrate {
+  0%   { transform: scale(1) rotate(0deg); }
+  20%  { transform: scale(1.1) rotate(-4deg); }
+  40%  { transform: scale(1.1) rotate(4deg); }
+  60%  { transform: scale(1.15) rotate(0deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* ============================================================
    ACCESSIBILITY: Reduced Motion
 =============================================================== */
 @media (prefers-reduced-motion: reduce){
