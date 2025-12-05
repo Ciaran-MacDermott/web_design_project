@@ -350,7 +350,28 @@ body.bg-body{
   font-size: 1.7rem;
 }
 
+/* ============================================================
+FORM
+=============================================================== */
+/* Add borders to form fields */
+form .form-control,
+form .form-select {
+  border: 2px solid #ccc !important;   /* thicker subtle border */
+  border-radius: 8px;                  /* optional: nicer rounded corners */
+  padding: 0.55rem 0.75rem;            /* make fields feel balanced */
+}
 
+/* Highlight when user clicks into the field */
+form .form-control:focus,
+form .form-select:focus {
+  border-color: var(--emerald-deep);
+  box-shadow: 0 0 0 0.15rem rgba(0, 100, 50, 0.25);
+}
+.form-check {
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
 
 
 /* ============================================================
