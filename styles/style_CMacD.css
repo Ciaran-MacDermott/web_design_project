@@ -372,6 +372,23 @@ form .form-select:focus {
   color: #fff;
 }
 
+/* Primary buttons: dark green instead of Bootstrap blue */
+.btn-primary {
+  background-color: var(--emerald-deep);
+  border-color: var(--emerald-deep);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #163628;   /* a bit darker on hover */
+  border-color: #163628;
+}
+
+.btn-primary:active {
+  background-color: #10241b;
+  border-color: #10241b;
+}
+
 /* ============================================================
    FOOTER
 =============================================================== */
