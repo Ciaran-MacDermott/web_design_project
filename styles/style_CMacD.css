@@ -216,7 +216,7 @@ body{
   height: 50px;
 }
 .section-wave path{
-  fill: var(--wave-fill);
+  fill: #FOEBE4;
   opacity: 1;
 }
 .wave-down{ margin-top: -2px; }
