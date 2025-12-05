@@ -463,12 +463,55 @@ form .form-select:focus {
 }
 
 /* ============================================================
-  DONATION POPUP WINDOW
+   GENERIC POPUP (used for donation)
 =============================================================== */
-/* Donation popup tree wiggle */
-.donate-icon{
-  animation: tree-celebrate 1.6s ease-in-out infinite;
+.signup-popup{
+  position: fixed;
+  inset: 0;                             /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.45);
+  display: none;                        /* IMPORTANT: hidden until JS shows it */
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.signup-popup-inner{
+  background: #fff;
+  max-width: 420px;
+  width: 90%;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  position: relative;
+  text-align: center;
+  transform: scale(0.9) translateY(10px);
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+/* when JS adds .show */
+.signup-popup-inner.show{
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.signup-popup-close{
+  position: absolute;
+  top: 0.4rem;
+  right: 0.6rem;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Tree celebration animation */
+.signup-popup-icon.donate-icon{
   font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+  animation: tree-celebrate 1.6s ease-in-out infinite;
 }
 
 @keyframes tree-celebrate {
