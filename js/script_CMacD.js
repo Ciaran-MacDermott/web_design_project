@@ -1,4 +1,4 @@
-// =============== BASIC PAGE BEHAVIOUR (VANILLA JS) ===============
+// =============== BASIC PAGE BEHAVIOUR ===============
 document.addEventListener('DOMContentLoaded', function () {
   // 1. Animated number counters
   const counters = document.querySelectorAll('[data-count]');
