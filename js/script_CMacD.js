@@ -126,36 +126,34 @@ $(document).ready(function () {
 
 
 // ==== DONATION POPUP ====
-
-const $donateBtn   = $('#donateOnlineButton');
+const $donateBtn   = $('#donateOnlineButton');      // your Donate online button
 const $donatePopup = $('#donationSuccessPopup');
 const $donateInner = $donatePopup.find('.signup-popup-inner');
 
-if ($donateBtn.length) {
+if ($donateBtn.length && $donatePopup.length) {
   $donateBtn.on('click', function (e) {
-    e.preventDefault(); // prevent navigation
+    e.preventDefault(); // don't follow link
 
-    // Show popup
     $donatePopup.attr('aria-hidden', 'false').fadeIn(200, function () {
       $donateInner.addClass('show');
     });
   });
-}
 
-// Close when clicking X, OK button, or outside
-$donatePopup.on('click', '.signup-popup-close, .donation-popup-ok', function () {
-  hideDonatePopup();
-});
-
-$donatePopup.on('click', function (e) {
-  if ($(e.target).is('#donationSuccessPopup')) {
+  // close popup on X or "You're amazing!"
+  $donatePopup.on('click', '.signup-popup-close, .donation-popup-ok', function () {
     hideDonatePopup();
-  }
-});
+  });
+
+  // close when clicking background overlay
+  $donatePopup.on('click', function (e) {
+    if ($(e.target).is('#donationSuccessPopup')) {
+      hideDonatePopup();
+    }
+  });
+}
 
 function hideDonatePopup() {
   $donateInner.removeClass('show');
-
   $donatePopup.fadeOut(180, function () {
     $donatePopup.attr('aria-hidden', 'true');
   });
