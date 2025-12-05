@@ -7,11 +7,9 @@
   --text: #333;
   --shadow: 0 3px 12px rgba(0,0,0,.08);
 
-
   --radius-pill: 999px;
   --hero-measure: 80ch;
   --section-y: clamp(2rem, 4vw, 4rem);
-
 
   --wave-fill: #ffffff;            /* color for divider waves (card color) */
   --emerald: #276749;              /* primary green */
@@ -29,9 +27,6 @@ body.bg-body{
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-
-
-
 /* Page wrapper */
 #page-wrapper {
   max-width: 1500px;
@@ -41,24 +36,15 @@ body.bg-body{
   box-shadow: 0 3px 15px rgba(0,0,0,0.05);
 }
 
-
-
-
 /* Space between sections inside wrapper */
 #page-wrapper section {
   margin-bottom: 1.5rem;
 }
 
-
-
-
 /* Last section sits closer to footer */
 #page-wrapper section:last-child {
   margin-bottom: 0;
 }
-
-
-
 
 /* Containers: slightly tighter default gutters */
 .container,
@@ -71,15 +57,9 @@ body.bg-body{
   padding-right: 0.85rem !important;
 }
 
-
-
-
 /* Simple helpers */
 .soft-shadow{ box-shadow: var(--shadow); }
 .object-cover{ object-fit: cover; }
-
-
-
 
 .text-emerald{
   color: var(--emerald);
@@ -87,9 +67,6 @@ body.bg-body{
 .tracking-wide{
   letter-spacing: .18em;
 }
-
-
-
 
 /* ============================================================
    HEADER & NAVBAR
@@ -100,17 +77,11 @@ body.bg-body{
   padding-block: .5rem;
 }
 
-
-
-
-/* On scroll (used by JS later) */
+/* On scroll (used by JS) */
 .site-header-scrolled{
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
   padding-block: .25rem;
 }
-
-
-
 
 /* Logo box in navbar */
 .logo-box {
@@ -122,15 +93,9 @@ body.bg-body{
   transition: transform .25s ease;
 }
 
-
-
-
 .site-header-scrolled .logo-box{
   transform: scale(0.9);
 }
-
-
-
 
 /* Actual logo image inside nav */
 .logo-img {
@@ -139,16 +104,10 @@ body.bg-body{
   object-fit: contain;
 }
 
-
-
-
 /* Smaller logo on mobile */
 @media (max-width: 768px) {
   .logo-box { width: 45px; height: 45px; }
 }
-
-
-
 
 /* Inline logo in hero tagline */
 .hero-logo-inline{
@@ -162,9 +121,6 @@ body.bg-body{
     width: 40px;
   }
 }
-
-
-
 
 /* Nav link buttons */
 .nav-pill{
@@ -180,9 +136,6 @@ body.bg-body{
   color: #111 !important;
 }
 
-
-
-
 /* ============================================================
    HERO SECTION
 =============================================================== */
@@ -191,9 +144,6 @@ body.bg-body{
   padding-block: var(--section-y);
   background: #fff;
 }
-
-
-
 
 /* Big logo above title */
 .hero-logo-main{
@@ -206,19 +156,13 @@ body.bg-body{
   object-fit: contain;
 }
 
-
-
-
 /* Title text */
 .hero-title{
   line-height: 1.2;
   text-align: center;
 }
 
-
-
-
-/* Main site name: same family as tagline */
+/* Main site name: same family as tagline, in green */
 .hero-title-main{
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
@@ -229,10 +173,7 @@ body.bg-body{
   margin-top: 0.25rem;
 }
 
-
-
-
-/* Sub heading: more elegant serif */
+/* Sub heading: more elegant serif, less “childish” */
 .hero-title-sub{
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -241,17 +182,11 @@ body.bg-body{
   letter-spacing: .03em;
 }
 
-
-
-
 /* Hero text width */
 .hero-lead{
   max-width: var(--hero-measure);
   margin: 0 auto;
 }
-
-
-
 
 /* Hero image area */
 .hero-figure{
@@ -259,9 +194,6 @@ body.bg-body{
   height: clamp(180px, 28vw, 420px);
   margin-inline: auto;
 }
-
-
-
 
 /* ============================================================
    WAVY DIVIDERS
@@ -285,16 +217,10 @@ body.bg-body{
   transform: rotate(180deg);
 }
 
-
-
-
 /* Top wave just under navbar, green behind it */
 .wave-top{
   background: var(--bg-page);
 }
-
-
-
 
 /* ============================================================
    MAIN CONTENT AREA
@@ -307,9 +233,6 @@ body.bg-body{
   max-width: min(1100px, 96vw);
   margin-inline: auto;
 }
-
-
-
 
 /* Body text and lists in main content */
 #main-content p{
@@ -326,9 +249,6 @@ body.bg-body{
   margin-bottom: .35rem;
   line-height: 1.6;
 }
-
-
-
 
 /* Stats styling */
 .stats-row{
@@ -348,18 +268,12 @@ body.bg-body{
   font-size: 1.7rem;
 }
 
-
-
-
 /* ============================================================
    NEWSLETTER SECTION
 =============================================================== */
 #newsletter{
   background: #fff;
 }
-
-
-
 
 /* ============================================================
    CONNECT SECTION
@@ -368,9 +282,6 @@ body.bg-body{
   background: #fff;
   text-align: center;
 }
-
-
-
 
 /* Social buttons */
 .social-link{
@@ -392,17 +303,11 @@ body.bg-body{
   box-shadow: 0 2px 5px rgba(0,0,0,.08);
 }
 
-
-
-
 /* Contact cards */
 .contact-card{
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,.04);
 }
-
-
-
 
 /* Map embed */
 .map-wrapper{
@@ -417,9 +322,6 @@ body.bg-body{
   display: block;
 }
 
-
-
-
 /* ============================================================
    BUTTONS
 =============================================================== */
@@ -433,9 +335,6 @@ body.bg-body{
   color: #fff;
 }
 
-
-
-
 /* ============================================================
    FOOTER
 =============================================================== */
@@ -444,9 +343,6 @@ body.bg-body{
   color: #f5f5f5;                    /* light text */
   text-align: center;
 }
-
-
-
 
 /* Make sure links in the footer are readable too (if you add any) */
 .site-footer a{
@@ -457,11 +353,8 @@ body.bg-body{
   text-decoration: underline;
 }
 
-
-
-
 /* ============================================================
-   BACK TO TOP BUTTON (created by JS later)
+   BACK TO TOP BUTTON (created by JS)
 =============================================================== */
 #backToTop {
   position: fixed;
@@ -480,9 +373,6 @@ body.bg-body{
 #backToTop i {
   font-size: 1.1rem;
 }
-
-
-
 
 /* ============================================================
    ACCESSIBILITY: Reduced Motion
