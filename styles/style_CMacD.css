@@ -305,6 +305,27 @@ form .form-select:focus {
   margin-left: -1.3rem;   /* pull the checkbox into the padded area nicely */
 }
 
+
+/* ============================================================
+   DONATE SECTION
+=============================================================== */
+#donate{
+  text-align: center;
+}
+
+.donate-qr{
+  max-width: 220px;
+}
+
+/* Donate list inside the donate section */
+.donate-list{
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0 0 0.75rem 0;
+  text-align: left;
+}
+
+
 /* ============================================================
    NEWSLETTER SECTION
 =============================================================== */
