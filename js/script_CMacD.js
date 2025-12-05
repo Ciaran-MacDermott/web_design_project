@@ -124,3 +124,41 @@ $(document).ready(function () {
   
 });
 
+
+// ==== DONATION POPUP ====
+
+const $donateBtn   = $('#donateOnlineButton');
+const $donatePopup = $('#donationSuccessPopup');
+const $donateInner = $donatePopup.find('.signup-popup-inner');
+
+if ($donateBtn.length) {
+  $donateBtn.on('click', function (e) {
+    e.preventDefault(); // prevent navigation
+
+    // Show popup
+    $donatePopup.attr('aria-hidden', 'false').fadeIn(200, function () {
+      $donateInner.addClass('show');
+    });
+  });
+}
+
+// Close when clicking X, OK button, or outside
+$donatePopup.on('click', '.signup-popup-close, .donation-popup-ok', function () {
+  hideDonatePopup();
+});
+
+$donatePopup.on('click', function (e) {
+  if ($(e.target).is('#donationSuccessPopup')) {
+    hideDonatePopup();
+  }
+});
+
+function hideDonatePopup() {
+  $donateInner.removeClass('show');
+
+  $donatePopup.fadeOut(180, function () {
+    $donatePopup.attr('aria-hidden', 'true');
+  });
+}
+
+
