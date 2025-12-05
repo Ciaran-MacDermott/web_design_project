@@ -97,4 +97,30 @@ $(function () {
 
 
 
+$(document).ready(function () {
+  
+  // Newsletter form popup
+  const newsletterForm = document.querySelector('#newsletter form');
+
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault(); // stop page reload
+
+      // Use Bootstrap’s validation
+      if (!newsletterForm.checkValidity()) {
+        newsletterForm.classList.add('was-validated');
+        return;
+      }
+
+      // If valid → show modal
+      const popup = new bootstrap.Modal(document.querySelector('#newsletterSuccessModal'));
+      popup.show();
+
+      // Reset form after success
+      newsletterForm.reset();
+      newsletterForm.classList.remove('was-validated');
+    });
+  }
+  
+});
 
