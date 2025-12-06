@@ -1,3 +1,6 @@
+<!--
+Ciaran MacDermott worked on over the last 5 weeks to create this webpage for Emerald Roots
+-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Emerald Roots — Agroforestry for a Greener Ireland</title>
 
+    <!-- API/ CDN references-->
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
@@ -29,11 +33,12 @@
   </head>
 
   <body class="bg-body text-center">
-    <!-- HEADER / NAV -->
+    <!-- HEADER / NAV BAR Section , we agreed on common colour pallet as a group, using bootstrap classes here-->
     <header class="site-header soft-shadow py-2 py-md-3">
       <nav class="navbar navbar-expand-md navbar-light" aria-label="Primary navigation">
         <div class="container-xxl d-flex justify-content-between align-items-center">
           <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+
             <!-- Logo -->
             <span class="logo-box d-flex align-items-center justify-content-center">
               <img
@@ -72,168 +77,184 @@
       </nav>
     </header>
 
-    <!-- PAGE WRAPPER -->
-    <main id="page-wrapper" class="shadow-sm">
-      <!-- TOP WAVE UNDER NAVBAR -->
+    <!-- PAGE WRAPPER the container is 100% wide until the extra-extra-large breakpoint is reached. https://www.educative.io/answers/how-to-wrap-a-page-content-with-bootstrap-->
+    <main id="page-wrapper" class="shadow-sm container-xxl">
+
+      <!-- TOP WAVE UNDER NAVBAR useful site for getting the svg code https://getwaves.io/ (can make way crazier shapes)-->
+
       <div class="section-wave wave-down wave-top" aria-hidden="true">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,40 C240,90 480,0 720,50 C960,100 1200,30 1440,70 L1440,100 L0,100 Z"></path>
         </svg>
       </div>
 
-      <!-- HERO -->
-      <section id="hero" class="py-5 bg-white">
-        <div class="container-xxl">
-          <p class="text-uppercase small mb-2 text-emerald fw-semibold tracking-wide">
-            Agroforestry for a climate-resilient Ireland
-            <img
-              src="img/tree_logo.png"
-              alt="Emerald Roots Logo"
-              class="hero-logo-inline"
-            />
-          </p>
+      <!-- HERO SECTION the main part we want viewers attnetion to brand/message centrepoint-->
+      <section id="hero" class="framed-section">
+        <div class="framed-inner">
+          <div class="container-xxl">
+            <p class="text-uppercase small mb-2 text-emerald fw-semibold tracking-wide">
+              Agroforestry for a climate-resilient Ireland
+              <img
+                src="img/tree_logo.png"
+                alt="Emerald Roots Logo"
+                class="hero-logo-inline"
+              />
+            </p>
 
-          <!-- Big logo above main title -->
-          <div class="hero-logo-main">
-            <img
-              src="img/tree_logo.png"
-              alt="Emerald Roots main logo"
-              class="hero-logo-main-img"
-            />
-          </div>
+            <!-- Tree logo above main title -->
+            <div class="hero-logo-main">
+              <img
+                src="img/tree_logo.png"
+                alt="Emerald Roots main logo"
+                class="hero-logo-main-img"
+              />
+            </div>
 
-          <!-- HERO TITLES -->
-          <h1 class="hero-title hero-title-main mb-1">
-            Emerald Roots
-          </h1>
-          <h2 class="hero-title hero-title-sub mb-3">
-            Student-led agroforestry across Ireland
-          </h2>
+            <!-- HERO Section Titles -->
+            <h1 class="hero-title hero-title-main mb-1">
+              Emerald Roots
+            </h1>
+            <h2 class="hero-title hero-title-sub mb-3">
+              Student-led agroforestry across Ireland
+            </h2>
 
-          <p class="lead mx-auto hero-lead">
-            Emerald Roots connects students, farmers and communities to plant diverse native trees,
-            restore soils and trial climate-smart farming on real Irish farms.
-          </p>
-          <br>
+            <p class="lead mx-auto hero-lead">
+              Emerald Roots connects students, farmers and communities to plant diverse native trees,
+              restore soils, educate  and trial climate-smart farming on Irish farms and woodlands.
+            </p>
+            <br>
 
-          <!-- Hero image -->
-          <figure
-            class="mx-auto mb-3 hero-figure overflow-hidden"
-            style="max-width: 1200px;"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?auto=format&fit=crop&q=80&w=774"
-              alt="Mixed native woodland in Ireland"
-              class="w-100 h-100 object-cover"
-            />
-          </figure>
+            <!-- Hero image taken from free stock image site-->
+            <figure
+              class="mx-auto mb-3 hero-figure overflow-hidden"
+              style="max-width: 1200px;"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?auto=format&fit=crop&q=80&w=774"
+                alt="Mixed native woodland in Ireland"
+                class="w-100 h-100 object-cover"
+              />
+            </figure>
 
-          <p class="lead mx-auto hero-lead">
-            From hedgerows to small woodland pockets, we focus on
-            practical, farmer-friendly agroforestry that fits within Irish schemes and supports
-            both biodiversity and livelihoods.
-          </p>
-          <br>
-          <p class="text-muted mb-3"">
-            Ireland was once almost completely blanketed in native woodland. Today, we have some of the lowest levels of native forest cover in Europe.
-            Restoring these ecosystems matters—not just for biodiversity, but for climate resilience and rural livelihoods.
-            Planting purely coniferous plantations may offer short-term timber gains, but it often leads to soil acidification, poor water quality, and limited habitat diversity. 
-            Instead, we champion mixed native species that rebuild layered canopies, healthy soils, and thriving wildlife corridors.
-          </p>
+            <p class="lead mx-auto hero-lead">
+              From hedgerows to small woodland pockets, we focus on practical, farmer-friendly agroforestry that fits within Irish schemes and supports
+              both biodiversity, carbon sequestration and livelihoods.
+            </p>
+            <br>
+            <p class="text-muted mb-3">
+              Ireland was once almost completely blanketed in native woodland. Today, we have some of the lowest levels of native forest cover in Europe.
+              Restoring these ecosystems matters not just for biodiversity, but for climate resilience, community well-being and rural livelihoods.
+              Planting purely coniferous plantations may offer short-term timber gains, but it often leads to soil acidification, poor water quality, and limited habitat diversity. 
+              Instead, we champion mixed native species that rebuild layered canopies, healthy soils, and thriving wildlife corridors through regenerative forestry.
+            </p>
 
-          <!-- CTA buttons -->
-          <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-4">
-            <a href="#newsletter" class="btn btn-primary rounded-pill px-4">
-              Join our newsletter
-            </a>
-            <a href="get_involved.html" class="btn btn-outline-emerald rounded-pill px-4">
-              Explore volunteer days
-            </a>
-          </div>
+            <!-- Call to action Bootrap template buttons -->
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-4">
+              <a href="#newsletter" class="btn btn-primary rounded-pill px-4">
+                Sign up to our newsletter
+              </a>
+              <a href="get_involved.html" class="btn btn-outline-emerald rounded-pill px-4">
+                Explore volunteer days and events
+              </a>
+            </div>
+            
+            <!-- Using JS loop using these classes to animate some pseudo-stats to motivate more cta signups -->
+             <!-- Split the 12 columns into 3 equal parts for stats (stacked on mobile screens)-->
+              <!-- Using divs & p tags to stack the header, statistic and subheaders-->
+            <div class="row g-3 mt-5 justify-content-center stats-row">
 
-         
-          <div class="row g-3 mt-5 justify-content-center stats-row">
-            <div class="col-12 col-md-4">
-              <div class="stat-card h-100">
-                <div class="stat-label small text-uppercase text-muted mb-1">
-                  Native trees planted
+              <div class="col-12 col-md-4">
+                <div class="stat-card h-100">
+                  <div class="stat-label small text-uppercase text-muted mb-1">
+                    Native trees planted so far
+                  </div>
+                  <div class="stat-value mb-0">
+                    <span data-count="42000">0</span>+
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Across pilot sites in Ireland.
+                  </p>
                 </div>
-                <div class="stat-value mb-0">
-                  <span data-count="42000">0</span>+
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="stat-card h-100">
+                  <div class="stat-label small text-uppercase text-muted mb-1">
+                    Student volunteers who have taken part
+                  </div>
+                  <div class="stat-value mb-0">
+                    <span data-count="280">0</span>+
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Learning field skills while supporting real farms.
+                  </p>
                 </div>
-                <p class="small text-muted mb-0">
-                  Across pilot sites in Galway, Clare and Mayo.
-                </p>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="stat-card h-100">
+                  <div class="stat-label small text-uppercase text-muted mb-1">
+                    Hectares under restoration
+                  </div>
+                  <div class="stat-value mb-0">
+                    <span data-count="65">0</span>+
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Hedgerows and new native woodland pockets.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="stat-card h-100">
-                <div class="stat-label small text-uppercase text-muted mb-1">
-                  Student volunteers
-                </div>
-                <div class="stat-value mb-0">
-                  <span data-count="280">0</span>+
-                </div>
-                <p class="small text-muted mb-0">
-                  Learning field skills while supporting real farms.
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="stat-card h-100">
-                <div class="stat-label small text-uppercase text-muted mb-1">
-                  Hectares under restoration
-                </div>
-                <div class="stat-value mb-0">
-                  <span data-count="65">0</span>+
-                </div>
-                <p class="small text-muted mb-0">
-                  Hedgerows, riparian buffers and new woodland pockets.
-                </p>
-              </div>
-            </div>
+
+            <!-- End stats -->
           </div>
-          <!-- End stats -->
         </div>
       </section>
 
-       <!-- DONATE SECTION -->
-      <section id="donate" class="py-5 bg-white">
-        <div class="container-xxl">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7">
-              <h3 class="mb-3">Support Emerald Roots</h3>
-              <p class="text-muted mb-3">
-                Every donation helps us plant more native trees, provide tools and training
-                for volunteers and support students travelling to rural field sites across Ireland.
-              </p>
+      <!-- DONATE SECTION -->
+      <section id="donate" class="framed-section">
+        <div class="framed-inner">
+          <div class="container-xxl">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-xl-7">
+                <h3 class="mb-3">Support Emerald Roots</h3>
+                <p class="text-muted mb-3">
+                  Every donation helps us plant more native trees, provide tools and training
+                  for volunteers and support students travelling to rural field sites across Ireland.
+                </p>
+                <br>
+                <p class="text-muted mb-3">
+                  We are a non-profit organisation and rely on the generosity of supporters like you
+                  to continue our work. Your contribution, no matter the size, makes a real difference
+                </p>
 
-              <div class="row align-items-center gy-3 mt-3">
-                <!-- QR code column -->
-                <div class="col-md-5 text-center">
-                  <img
-                    src="img/qr_donate.png"
-                    alt="QR code to donate to Emerald Roots"
-                    class="donate-qr img-fluid"
-                  />
-                  <p class="small text-muted mt-2 mb-0">
-                    Scan this code to donate securely.
-                  </p>
-                </div>
+                <div class="row align-items-center gy-3 mt-3">
+                  <!-- QR code column -->
+                  <div class="col-md-5 text-center">
+                    <img
+                      src="img/qr_donate.png"
+                      alt="QR code to donate to Emerald Roots"
+                      class="donate-qr img-fluid"
+                    />
+                    <p class="small text-muted mt-2 mb-0">
+                      Scan this code to donate securely.
+                    </p>
+                  </div>
 
-                <!-- Text + link column -->
-                <div class="col-md-7 text-start">
-                  <ul class="donate-list">
-                    <li>Buy native saplings, guards and stakes.</li>
-                    <li>Support tools, insurance and training for volunteer days.</li>
-                    <li>Help students join monitoring trips to partner farms.</li>
-                  </ul>
-                  <a href="#"
-                     id="donateOnlineButton"
-                     class="btn btn-outline-emerald rounded-pill px-4 mt-2">
-                     Donate online instead
-                  </a>
+                  <!-- Text + donate online button (this button has a fun animated surprise :D) column -->
+                  <div class="col-md-7 text-start">
+                    <ul class="donate-list">
+                      <li>Buy native saplings, guards and stakes.</li>
+                      <li>Support tools, insurance and training for volunteer days.</li>
+                      <li>Help students join trips to partner projects in the EU.</li>
+                    </ul>
+                    <a href="#"
+                       id="donateOnlineButton"
+                       class="btn btn-outline-emerald rounded-pill px-4 mt-2">
+                       Donate online instead
+                    </a>
 
+                  </div>
                 </div>
               </div>
             </div>
@@ -248,57 +269,60 @@
         </svg>
       </div>
 
-      <!-- MAIN CONTENT -->
-      <section id="main-content" class="py-5 bg-white">
-        <div class="container-xxl">
-          <h2 class="h4 mb-3">Why agroforestry matters in Ireland</h2>
+      <!-- Educational Section nested in cards-->
+      <section id="main-content" class="framed-section">
+        <div class="framed-inner">
+          <div class="container-xxl">
+            <h2 class="mb-3">Why agroforestry matters in Ireland</h2>
 
-          <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 bg-light-subtle">
-            <p class="text-muted mb-3">
-              Agroforestry blends trees, crops and livestock on the same piece of land. On Irish
-              farms this can mean adding native trees into field boundaries, wet corners, around
-              yards or along watercourses rather than taking whole fields out of production.
-            </p>
+            <div class="content-box mx-auto px-3 px-sm-4 px-md-5 py-4 bg-light-subtle">
+              <p class="text-muted mb-3">
+                Agroforestry blends trees, crops and livestock on the same piece of land. On Irish
+                farms this can mean adding native trees into field boundaries, wet corners, around
+                yards or along watercourses rather than taking whole fields out of production. 
+                By planting trees on some poor pasture land on a large farm we can offset caused by the commercial aspects of farming
+              </p>
 
-            <p class="text-muted mb-3">
-              When designed well, agroforestry can work alongside schemes like ACRES and the
-              Native Woodland Establishment Grant and the European Erasmus plus scheme, where your donations can help:
-            </p>
+              <p class="text-muted mb-3">
+                When designed well, agroforestry can work alongside schemes like ACRES and the
+                Native Woodland Establishment Grant and the European Erasmus plus scheme, where your donations can help projects such as :
+              </p>
 
-            <ul>
-              <li>Plant native species such as oak, alder, birch, rowan and hazel in the right place.</li>
-              <li>Create shelter for livestock and reduce wind stress on grass and crops.</li>
-              <li>Protect streams and rivers with treed buffers that filter nutrients and sediment.</li>
-              <li>Reconnect fragmented habitats to support birds, bats and pollinators.</li>
-              <li>Build long-term resilience to heavier rain, summer drought and new pests.</li>
-            </ul>
+              <ul>
+                <li>Plant native species such as oak, alder, birch, rowan and hazel in the right place.</li>
+                <li>Create shelter for livestock and reduce wind stress on grass and crops.</li>
+                <li>Protect streams and rivers with tree buffers that filter nutrients and sediment.</li>
+                <li>Reconnect fragmented habitats to support birds, bats and pollinators.</li>
+                <li>Build long-term resilience to heavier rain, wind and summer drought and new pests.</li>
+                <li>Create a source of free heating fuel over time through forestry management</li>
+              </ul>
 
-            <!-- Regenerative ag image -->
-            <figure
-              class="ratio ratio-16x9 overflow-hidden rounded-3 mx-auto"
-              style="max-width: 1100px;"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&q=80&w=774"
-                alt="Agroforestry landscape with mixed trees and grazing"
-                class="w-100 h-100 object-cover"
-              />
-            </figure>
+              <!-- Regenerative stock agricultural image -->
+              <figure
+                class="ratio ratio-16x9 overflow-hidden rounded-3 mx-auto"
+                style="max-width: 1100px;"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&q=80&w=774"
+                  alt="Agroforestry landscape with mixed trees and grazing"
+                  class="w-100 h-100 object-cover"
+                />
+              </figure>
 
-            <p class="mt-4 text-start text-md-center">
-              Our pilot projects in the west of Ireland work with family farms to co-design
-              small, manageable planting plans. Students help with mapping, monitoring and
-              citizen-science style surveys so that each site becomes a living classroom for
-              climate resilience, soil health and biodiversity. 
-            </p>
-            <p class="mt-4 text-start text-md-center">
-              Volunteer planting and forest maintanance days are also a great social excercise for meeting new people, connecting with nature
-              and clearing the head, where the concept of forest bathing has been well known in Japan for centuries.
-            </p>
+              <p class="mt-4 text-start text-md-center">
+                Our pilot projects in the west of Ireland work with family farms to co-design
+                small, manageable planting plans. Students help with mapping, monitoring and
+                citizen-science style surveys so that each site becomes a living classroom for
+                climate resilience, soil health and biodiversity. 
+              </p>
+              <p class="mt-4 text-start text-md-center">
+                Volunteer planting and forest maintanance days are also a great social excercise for meeting new people, connecting with nature
+                and clearing the head, where the concept of forest bathing has been well known in Japan for centuries.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-                 
 
       <!-- Wave divider -->
       <div class="section-wave wave-up" aria-hidden="true">
@@ -307,108 +331,111 @@
         </svg>
       </div>
 
-      <!-- NEWSLETTER SIGNUP -->
-      <section id="newsletter" class="py-5 bg-white">
-        <div class="container-xxl">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7">
-              <h3 class="mb-3">Stay rooted with our newsletter</h3>
-              <!-- Regenerative ag image -->
-              <figure
-                class="ratio ratio-16x9 overflow-hidden rounded-3 mx-auto"
-                style="max-width: 1100px;"
-              >
-                <img
-                  src="img/volunteering.jpg"
-                  alt="Agroforestry volunteering stock image"
-                  class="w-100 h-100 object-cover"
-                />
-              </figure>
-              <p class="text-muted mb-4">
-                Get seasonal agroforestry tips, project updates and calls for volunteers straight
-                to your inbox. Perfect for students, farmers and anyone curious about
-                climate-smart land use in Ireland.
-              </p>
+      <!-- NEWSLETTER form section-->
+      <section id="newsletter" class="framed-section">
+        <div class="framed-inner">
+          <div class="container-xxl">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-xl-7">
+                <h2 class="mb-3">Stay rooted with our newsletter</h2>
+                <p class="text-muted mb-4">Don't miss out on the next events in your area</p>
+                <!-- Forestry volunteering image -->
+                <figure
+                  class="ratio ratio-16x9 overflow-hidden rounded-3 mx-auto"
+                  style="max-width: 1100px;"
+                >
+                  <img
+                    src="img/volunteering.jpg"
+                    alt="Agroforestry volunteering stock image"
+                    class="w-100 h-100 object-cover"
+                  />
+                </figure>
+                <p class="text-muted mb-4">
+                  Get seasonal agroforestry tips, project updates and calls for volunteers straight
+                  to your inbox. Perfect for students, farmers and anyone curious about
+                  climate-smart land use in Ireland.
+                </p>
 
-              <form class="needs-validation" novalidate>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="newsletterName" class="form-label">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="newsletterName"
-                      placeholder="Alex Murphy"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Please enter your name.
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="newsletterEmail" class="form-label">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="newsletterEmail"
-                      placeholder="you@example.com"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Please enter a valid email address.
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="newsletterInterest" class="form-label">
-                      What are you most interested in?
-                    </label>
-                    <select class="form-select" id="newsletterInterest" required>
-                      <option value="" selected disabled>Choose one...</option>
-                      <option value="farmer">Support for farmers &amp; landowners</option>
-                      <option value="student">Student &amp; research updates</option>
-                      <option value="events">Workshops &amp; volunteering days</option>
-                      <option value="policy">Policy &amp; funding news</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please choose an area of interest.
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-check text-start">
+                <form class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="newsletterName" class="form-label">Name</label>
                       <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="newsletterConsent"
+                        type="text"
+                        class="form-control"
+                        id="newsletterName"
+                        placeholder="Alex Murphy"
                         required
                       />
-                      <label class="form-check-label" for="newsletterConsent">
-                        I agree to receive emails from Emerald Roots and understand I can unsubscribe at
-                        any time.
-                      </label>
                       <div class="invalid-feedback">
-                        Please confirm you’re happy to hear from us.
+                        Please enter your name.
                       </div>
                     </div>
-                  </div>
 
-                  <div class="col-12 text-start text-md-end">
-                    <button class="btn btn-primary rounded-pill px-4" type="submit">
-                      Sign up
-                    </button>
+                    <div class="col-md-6">
+                      <label for="newsletterEmail" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="newsletterEmail"
+                        placeholder="you@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid email address.
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="newsletterInterest" class="form-label">
+                        What are you most interested in?
+                      </label>
+                      <select class="form-select" id="newsletterInterest" required>
+                        <option value="" selected disabled>Choose one...</option>
+                        <option value="farmer">Support for farmers &amp; landowners</option>
+                        <option value="student">Student &amp; research updates</option>
+                        <option value="events">Workshops &amp; volunteering days</option>
+                        <option value="policy">Policy &amp; funding news</option>
+                        <option value="petition">Sign petitions for your local councillors</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please choose an area of interest.
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-check text-start">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="newsletterConsent"
+                          required
+                        />
+                        <label class="form-check-label" for="newsletterConsent">
+                          I agree to receive emails from Emerald Roots and understand I can unsubscribe at
+                          any time.
+                        </label>
+                        <div class="invalid-feedback">
+                          Please confirm you’re happy to hear from us.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 text-start text-md-end">
+                      <button class="btn btn-primary rounded-pill px-4" type="submit">
+                        Sign up
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+
+              </div>
             </div>
           </div>
         </div>
+
       </section>
-
-
-
 
       <!-- Wave divider above connect section -->
       <div class="section-wave wave-down" aria-hidden="true">
@@ -417,76 +444,78 @@
         </svg>
       </div>
 
-      <!-- CONNECT SECTION -->
-      <section id="connect-section" class="py-5 bg-white">
-        <div class="container-xxl">
-          <h3 class="h5 fw-semibold mb-4">Connect with Emerald Roots</h3>
+      <!-- CONNECT SECTION (contacts & socials)-->
+      <section id="connect-section" class="framed-section">
+        <div class="framed-inner">
+          <div class="container-xxl">
+            <h2 class="h5 fw-semibold mb-4">Connect with Emerald Roots</h2>
 
-          <!-- Social links -->
-          <div class="mb-4">
-            <p class="small text-muted mb-2">
-              Follow our work and see project updates on social media:
-            </p>
-            <div class="d-flex justify-content-center flex-wrap gap-2">
-              <a href="#" class="social-link">
-                <i class="bi bi-facebook me-1" aria-hidden="true"></i>
-                Facebook
-              </a>
-              <a href="#" class="social-link">
-                <i class="bi bi-linkedin me-1" aria-hidden="true"></i>
-                LinkedIn
-              </a>
-              <a href="#" class="social-link">
-                <i class="bi bi-instagram me-1" aria-hidden="true"></i>
-                Instagram
-              </a>
-              <a href="#" class="social-link">
-                <i class="bi bi-twitter-x me-1" aria-hidden="true"></i>
-                X
-              </a>
-            </div>
-          </div>
-
-          <hr class="my-4">
-
-          <!-- Contact details -->
-          <div class="row gy-3 justify-content-center">
-            <div class="col-12 col-md-4 col-lg-3">
-              <div class="contact-card rounded-3 p-3 h-100">
-                <div class="fw-semibold mb-1">📧 Email</div>
-                <div class="text-muted small">hello@emeraldroots.ie</div>
+            <!-- Social links -->
+            <div class="mb-4">
+              <p class="small text-muted mb-2">
+                Follow our work and see project updates on social media or reach out for professional inquiries
+              </p>
+              <div class="d-flex justify-content-center flex-wrap gap-2">
+                <a href="#" class="social-link">
+                  <i class="bi bi-facebook me-1" aria-hidden="true"></i>
+                  Facebook
+                </a>
+                <a href="#" class="social-link">
+                  <i class="bi bi-linkedin me-1" aria-hidden="true"></i>
+                  LinkedIn
+                </a>
+                <a href="#" class="social-link">
+                  <i class="bi bi-instagram me-1" aria-hidden="true"></i>
+                  Instagram
+                </a>
+                <a href="#" class="social-link">
+                  <i class="bi bi-twitter-x me-1" aria-hidden="true"></i>
+                  X
+                </a>
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="contact-card rounded-3 p-3 h-100">
-                <div class="fw-semibold mb-1">📍 Address</div>
-                <div class="text-muted small">Campus Green Hub, Co. Galway</div>
+            <hr class="my-4">
 
-                <!-- Google Map embed -->
-                <div class="map-wrapper mt-3">
-                  <iframe
-                    class="map-embed"
-                    src="https://www.google.com/maps?q=Campus%20Green%20Hub%20Galway%20Ireland&output=embed"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    aria-label="Map showing Campus Green Hub, Co. Galway"
-                  ></iframe>
+            <!-- Contact details (adjusts per screen size)-->
+            <div class="row gy-3 justify-content-center">
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="contact-card rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">📧 Email</div>
+                  <div class="text-muted small">hello@emeraldroots.ie</div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-              <div class="contact-card rounded-3 p-3 h-100">
-                <div class="fw-semibold mb-1">📞 Phone</div>
-                <div class="text-muted small">+353 (0)91 123 456</div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="contact-card rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">📍 Address</div>
+                  <div class="text-muted small">Campus Green Hub, Dangan, Co. Galway</div>
+
+                  <!-- Google Map embed -->
+                  <div class="map-wrapper mt-3">
+                    <iframe
+                      class="map-embed"
+                      src="https://www.google.com/maps?q=Campus%20Green%20Hub%20Galway%20Ireland&output=embed"
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      aria-label="Map showing Campus Green Hub, Dangan, Co. Galway"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="contact-card rounded-3 p-3 h-100">
+                  <div class="fw-semibold mb-1">📞 Phone</div>
+                  <div class="text-muted small">+353 (0)91 123 456</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-     <!-- Wave directly under last card -->
+      <!-- Wave directly under last card (this could have been designed better but ran out of time)-->
       <div class="section-wave wave-up" aria-hidden="true">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,70 C240,30 480,100 720,50 C960,0 1200,90 1440,40 L1440,0 L0,0 Z"></path>
@@ -501,71 +530,64 @@
           © <span data-year>2025</span> Emerald Roots. Created as a University project by Ciaran, Mirla, Noemi.
         </small>
       </div>
+      <div class="container-xxl">
+        <small>
+          <p>A proud partner of Coillte and Erasmus Plus</p>
+        </small>
+      </div>
     </footer>
     
+
+    <!-- Some fun JS/ J Query Popups-->
+
     <!-- Newsletter Success Modal -->
-  <div class="modal fade" id="newsletterSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="newsletterSuccessModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center p-4">
-        <h4 class="mb-2">🎉 You're Signed Up!</h4>
+        <div class="modal-content text-center p-4">
+        <h4 class="mb-2">You're Signed Up! You will receive updates on our upcoming events and news into your mailbox. We appreciate you, love Emerald Roots</h4>
         <p class="text-muted">
-          Thanks for joining the Emerald Roots newsletter — we’re glad to have you!
+            Thanks for joining the Emerald Roots newsletter — we’re glad to have you on board the climate train!
         </p>
         <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
-          Close
+            Close
         </button>
-      </div>
+        </div>
     </div>
-  </div>
-    
-<!-- Newsletter Success Modal -->
-<div class="modal fade" id="newsletterSuccessModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4">
-      <h4 class="mb-2">You're Signed Up! You will receive updates on our upcoming events and news into your mailbox. We appreciate you, love Emerald Roots</h4>
-      <p class="text-muted">
-        Thanks for joining the Emerald Roots newsletter — we’re glad to have you!
-      </p>
-      <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
-        Close
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- DONATION SUCCESS POPUP -->
-<div id="donationSuccessPopup" class="signup-popup" aria-hidden="true">
-  <div class="signup-popup-inner">
-    <button type="button" class="signup-popup-close" aria-label="Close popup">
-      &times;
-    </button>
-
-    <div class="signup-popup-icon donate-icon">
-      🌳💚
     </div>
 
-    <h4 class="mb-2">Thank you for supporting Emerald Roots!</h4>
+    <!-- DONATION SUCCESS POPUP (uses custom css for mock animation)-->
+    <div id="donationSuccessPopup" class="signup-popup" aria-hidden="true">
+    <div class="signup-popup-inner">
+        <button type="button" class="signup-popup-close" aria-label="Close popup">
+        &times;
+        </button>
 
-    <p class="text-muted mb-3">
-      Your contribution directly helps plant native trees, support student fieldwork,
-      and grow community agroforestry across Ireland.
-    </p>
+        <div class="signup-popup-icon donate-icon">
+        🌳💚
+        </div>
 
-    <button type="button" class="btn btn-primary rounded-pill px-4 donation-popup-ok">
-      You're amazing!
-    </button>
-  </div>
-</div>
+        <h4 class="mb-2">Thank you for supporting Emerald Roots!</h4>
 
+        <p class="text-muted mb-3">
+        Your contribution directly helps plant native trees, support student fieldwork,
+        and grow community agroforestry across Ireland.
+        </p>
+
+        <button type="button" class="btn btn-primary rounded-pill px-4 donation-popup-ok">
+        You're amazing!
+        </button>
+    </div>
+    </div>
 
     <!-- JS-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
+    <!-- J Query-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- local-->
     <script src="js/script_CMacD.js"></script>
   </body>
 </html>
-
-
