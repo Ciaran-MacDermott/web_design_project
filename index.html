@@ -1,253 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Mission</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Roots</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
-
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar main-nav">
-    <div class="container d-flex align-items-center">
-
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/Logo1.png" alt="Emerald Roots Logo" class="logo-img" />
-        <span class="brand-text ms-2">Emerald <span class="green-word">Roots</span></span>
-      </a>
-
-      <div class="nav-links d-flex gap-4 ms-auto mb-0">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="activities.html">Our Fields of Activities</a>
-        <a class="nav-link active" href="mission.html">Our Mission</a>
-        <a class="nav-link" href="getinvolved.html">Get Involved</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Mission Text -->
-  <div class="container text-center mt-4">
-    <h1>Our Mission</h1>
-    <p class="text-justify">
-      In Ireland, agroforestry is increasingly recognised as a vital approach for enhancing soil health,
-      promoting biodiversity, and strengthening rural resilience. Our mission is to advance this sustainable
-      land-use practice by supporting systems that integrate trees with pasture and crops, creating productive
-      landscapes that operate in balance with the natural environment.
-    </p>
-  </div>
-
-  <!-- Image Grid -->
-  <div class="container image-grid text-center mt-4">
-
-    <div>
-      <img src="images/planting.jpg" width="120" onclick="toggleText('text1')" alt="Tree planting" />
-      <div id="text1" hidden>
-        <p class="text-justify">Reviving communities through collaborative agroforestry and regenerative practices.</p>
-      </div>
-    </div>
-
-    <div>
-      <img src="images/mission1.jpg" width="120" onclick="toggleText('text2')" alt="Agroforestry" />
-      <div id="text2" hidden>
-        <p class="text-justify">Sustainable farming practices that integrate trees, protect biodiversity, and enrich the soil.</p>
-      </div>
-    </div>
-
-    <div>
-      <img src="images/mission2.jpg" width="120" onclick="toggleText('text3')" alt="Agroforestry expansion" />
-      <div id="text3" hidden>
-        <p class="text-justify">Supporting long-term ecological balance through tree-crop integration and community stewardship.</p>
-      </div>
-    </div>
-
-  </div>
-
-   <!-- PROJECTS -->
-<section id="projects" class="mb-5">
-  <h2>Projects</h2>
-  <p class="justify-text">
-    Our projects are designed to demonstrate the benefits of agroforestry and regenerative land management in Ireland.focus on learning, innovation, and hands-on ecological restoration. Through our Erasmus partnerships, we collaborate with European organisations to exchange knowledge, train young people, and develop forward-thinking approaches to sustainable land use. Alongside this, our Agroforestry Test Sites across Ireland allow us to trial diverse tree–crop–livestock systems, monitor soil and biodiversity improvements, and demonstrate practical solutions for resilient farming. Together, these projects help us build a strong, science-based foundation for regenerative land management and community education.
-  </p>
-
-  <!-- Erasmus -->
-  <h3 class="mt-4">Erasmus</h3>
-  <p>Our Erasmus projects connect us with partners across Europe to exchange knowledge, develop new skills, and promote sustainable land management. Through training programs, workshops, and cultural collaboration, we empower young people and professionals to explore innovative approaches to agroforestry and environmental stewardship.</p>
-  <div class="row mt-3 justify-content-center">
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="images/erasmus.png" class="card-img-top uniform-img" alt="Erasmus Image 1">
-        <div class="card-body">
-          <p class="card-text">
-            Through our Erasmus partnerships, we collaborate with European organisations to exchange knowledge and build ecological innovation.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="images/erasmus1.webp" class="card-img-top uniform-img" alt="Erasmus Image 2">
-        <div class="card-body">
-          <p class="card-text">
-            Erasmus projects foster ecological innovation and strengthen collaboration across Europe.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Test Sites -->
-  <h3 class="mt-4">Agroforestry Test Sites</h3>
-  <p>Our agroforestry test sites serve as living laboratories where we trial different tree, crop, and livestock combinations. By monitoring soil health, biodiversity, and farm productivity, these sites help us identify practical, scalable solutions for regenerative farming in Ireland. Each test site provides real-world insights that guide our future projects and community outreach.</p>
-  <div class="row mt-3 justify-content-center">
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="images/testsites.webp" class="card-img-top uniform-img" alt="Test Sites Image 1">
-        <div class="card-body">
-          <p class="card-text">
-            Agroforestry test sites across Ireland act as living demonstrations of how trees, farming, and biodiversity can work together.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100">
-        <img src="images/testsites1.jpg" class="card-img-top uniform-img" alt="Test Sites Image 2">
-        <div class="card-body">
-          <p class="card-text">
-            These sites showcase sustainable land use practices that balance productivity with ecological health.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BUTTON TO SHOW FORM -->
-<section id="user-form-section" style="padding: 40px; text-align: center;">
-  <button id="show-form-btn" style="padding: 12px 25px; background-color: #043610; color: #fff; border: none; cursor: pointer; font-size: 1em; border-radius: 12px; display: inline-block;">
-    Join our Erasmus Project
-  </button>
-
-  <!-- HIDDEN FORM -->
-  <div id="user-form" style="display:none; margin-top: 30px; text-align: center;">
-    <h2>Enter Your Details</h2>
-    <form id="erasmus-form" action="#" method="post" style="max-width: 500px; margin: 0 auto; text-align: left;">
-
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="name" placeholder="Your full name" required style="width: 100%; padding: 8px; margin: 10px 0;"><br>
-      <span class="error-message" id="name-error" style="color:red; font-size:0.9rem;"></span>
-
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" placeholder="Your email" required style="width: 100%; padding: 8px; margin: 10px 0;"><br>
-      <span class="error-message" id="email-error" style="color:red; font-size:0.9rem;"></span>
-
-      <label for="phone">Phone Number:</label><br>
-      <input type="tel" id="phone" name="phone" placeholder="Your phone number" style="width: 100%; padding: 8px; margin: 10px 0;"><br>
-      <span class="error-message" id="phone-error" style="color:red; font-size:0.9rem;"></span>
-
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" placeholder="Your message" rows="4" style="width: 100%; padding: 8px; margin: 10px 0;"></textarea><br>
-
-      <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: #fff; border: none; cursor: pointer; border-radius: 12px;">Submit</button>
-    </form>
-    <p id="success-message" style="color:green; font-weight:600; margin-top:15px;"></p>
-  </div>
-</section>
-
-<!-- Inline JavaScript -->
-<script>
-  // Toggle form visibility
-  document.getElementById("show-form-btn").addEventListener("click", function() {
-    const formDiv = document.getElementById("user-form");
-    if (formDiv.style.display === "none" || formDiv.style.display === "") {
-      formDiv.style.display = "block";
-      this.textContent = "Hide Form";
-    } else {
-      formDiv.style.display = "none";
-      this.textContent = "Join our Erasmus Project";
-    }
-  });
-
-  // Validation
-  document.getElementById("erasmus-form").addEventListener("submit", function(event) {
-    let valid = true;
-
-    // Clear old errors
-    document.querySelectorAll(".error-message").forEach(el => el.textContent = "");
-    document.getElementById("success-message").textContent = "";
-
-    // Name validation
-    const name = document.getElementById("name").value.trim();
-    if (!name) {
-      document.getElementById("name-error").textContent = "Full name is required.";
-      valid = false;
-    }
-
-    // Email validation
-    const email = document.getElementById("email").value.trim();
-    const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-    if (!email) {
-      document.getElementById("email-error").textContent = "Email is required.";
-      valid = false;
-    } else if (!emailPattern.test(email)) {
-      document.getElementById("email-error").textContent = "Please enter a valid email address.";
-      valid = false;
-    }
-
-    // Phone validation (optional)
-    const phone = document.getElementById("phone").value.trim();
-    const phonePattern = /^[0-9\\s\\-\\+]{7,15}$/;
-    if (phone && !phonePattern.test(phone)) {
-      document.getElementById("phone-error").textContent = "Please enter a valid phone number.";
-      valid = false;
-    }
-
-    // Stop form submission if invalid
-    if (!valid) {
-      event.preventDefault();
-    } else {
-      event.preventDefault(); // prevent actual submission for demo
-      document.getElementById("success-message").textContent = "Form submitted successfully!";
-      // Optional: fade out success message
-      setTimeout(() => {
-        document.getElementById("success-message").textContent = "";
-      }, 4000);
-    }
-  });
-</script>
-
-
-
-
-  <!-- FOOTER -->
-  <footer class="footer-bg text-center p-3 mt-4">
+<header class="navbar">
     <div class="container">
-      <p>&copy; 2025 Emerald Roots. All rights reserved.</p>
-      <nav class="footer-nav">
-        <a href="#">Privacy Policy</a> |
-        <a href="#">Terms of Use</a> |
-        <a href="#">Contact</a>
-      </nav>
+        <h2 class="logo">
+            <img src="./img/erLog.png" alt="" width="50">Emerald Roots
+        </h2>
+
+        <nav class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="activities.html">Our fields of activities</a>
+            <a href="#">Our Mission</a>
+             <a href="#">Get involved</a>
+            <a href="#">Projects</a>
+             
+            
+        </nav>
     </div>
-  </footer>
+</header>
 
-  <script>
-    function toggleText(id) {
-      const element = document.getElementById(id);
-      element.hidden = !element.hidden;
-    }
-  </script>
+<section class="main">
+    <div class="main-content container">
+        <div class="text-content">
+            <h1>Plant a Tree,<br> Shape the Future</h1>
+            <p>Every tree we plant helps restore forests, protect wildlife, and create a healthier planet for future generations.</p>
+            <br>
+            <a href="https://www.google.com" class="btn btn-green">Join the Mission</a>
+        </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="main-image">
+            <img src="./img/tree.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Banner full-width -->
+<section class="banner-image">
+    <img id="banner-trigger" src="./img/home00.png" alt="">
+   <div id="scroll-reveal" class="hidden-text banner-text">
+        <h2>Forests Are Disappearing</h2>
+        <p>
+            Every year, more than 10 million hectares of forest are lost due to illegal logging,
+            agriculture expansion, and uncontrolled fires. Restoring forests is essential to protect
+            biodiversity, stabilize the climate, and preserve clean air and water.
+        </p>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="container">
+        <h2>Why Reforest?</h2>
+        <p>
+            Trees regulate temperature, store carbon, prevent soil erosion, and provide habitat for over 80% of terrestrial species.
+            Reforestation is one of the most effective natural solutions against climate change.
+        </p>
+    </div>
+</section>
+
+<!-- ONBOARDING SECTIONS -->
+<section class="onboarding-container container">
+    <div class="onboarding-text">
+        <h2>Understanding Deforestation</h2>
+        <p class="subtitle">Human activity is the main cause of forest loss worldwide.</p>
+        <div class="onboarding-step">
+            <div class="step-number"><img src="./img/erLog.png" alt="" width="50"></div>
+            <div class="step-content">
+                <h3>Agricultural Expansion</h3>
+                <p>
+                    70% of global deforestation is caused by converting forests into farmland, mostly for livestock and soy cultivation.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="onboarding-image">
+        <img src="./img/home7.jpg" alt="">
+        <p class="image-text">Forests protect the soil and prevent desertification.</p>
+    </div>
+</section>
+
+<section class="onboarding-container container">
+    <div class="onboarding-text">
+        <h2>Why Action Is Urgent</h2>
+        <p class="subtitle">Without healthy forests, life on Earth becomes unsustainable.</p>
+        <div class="onboarding-step">
+            <div class="step-number"><img src="./img/erLog.png" alt="" width="50"></div>
+            <div class="step-content">
+                <h3>Loss of Biodiversity</h3>
+                <p>Thousands of species lose their habitat each year. Restoring forests helps wildlife recover and ensures ecosystem balance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="onboarding-image">
+        <img src="./img/home8.jpg" alt="">
+        <p class="image-text">Healthy forests support 80% of terrestrial biodiversity.</p>
+    </div>
+</section>
+
+<section class="onboarding-container container">
+    <div class="onboarding-text">
+        <h2>What We Do</h2>
+        <p class="subtitle">Our mission is simple: restore life where it has disappeared.</p>
+        <div class="onboarding-step">
+            <div class="step-number"><img src="./img/erLog.png" alt="" width="50"></div>
+            <div class="step-content">
+                <h3>Reforestation & Community Work</h3>
+                <p>We plant native trees, support local communities, and protect natural habitats to create long-term ecological resilience.</p>
+            </div>
+        </div>
+    </div>
+    <div class="onboarding-image">
+        <img src="./img/home9.png" alt="">
+        <p class="image-text">Every tree planted restores balance to the planet.</p>
+    </div>
+</section>
+
+<!-- NEW SECTIONS ABOUT DEFORESTATION -->
+<section class="impact-section container">
+    <h2>Global Impact of Deforestation</h2>
+    <div class="impact-cards">
+        <div class="card">
+            <h3>20 fields/minute</h3>
+            <p>This is the amount of forest lost every minute worldwide.</p>
+        </div>
+        <div class="card">
+            <h3>CO₂</h3>
+            <p>Deforestation produces more CO₂ emissions than all cars and airplanes combined.</p>
+        </div>
+        <div class="card">
+            <h3>Biodiversity</h3>
+            <p>More than 80% of terrestrial species depend on forests to survive.</p>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section container">
+    <h2>Benefits of Reforestation</h2>
+    <div class="benefit-cards">
+        <div class="benefit-card">🌱 Clean the air</div>
+        <div class="benefit-card">🌧️ Regulate rainfall</div>
+        <div class="benefit-card">🏞️ Restore soils</div>
+        <div class="benefit-card">🐾 Provide habitat for wildlife</div>
+        <div class="benefit-card">🌡️ Reduce global warming</div>
+    </div>
+</section>
+
+
+
+<section class="before-after-section container">
+    <h2>Before and After Reforestation</h2>
+    <div class="before-after-images">
+        <div class="image-pair">
+            <img src="./img/before.png" alt="Before reforestation">
+            <p>Before: Degraded and lifeless land.</p>
+        </div>
+        <div class="image-pair">
+            <img src="./img/after.png" alt="After reforestation">
+            <p>After: Restored and biodiverse area.</p>
+        </div>
+        
+    </div>
+   
+</section>
+    <section class="counter-section container">
+    
+    <h2>Trees Planted</h2>
+    <p id="tree-counter">0</p>
+</section>
+    
+    <section class="help-section container">
+    <h2>How You Can Help</h2>
+    <ul>
+        <li>🌳 Donate to reforestation projects</li>
+        <li>🌿 Sponsor a tree</li>
+        <li>👨‍👩‍👧 Participate in planting events</li>
+        <li>📄 Reduce paper and meat consumption</li>
+        <li>📢 Spread awareness about the importance of forests</li>
+    </ul>
+      <h1>
+  <a href="https://www.google.com" class="btn btn-dark">Donate Now</a>
+</h1>
+
+</section>
+    
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Emerald Roots. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Use</a> | 
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="./js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
