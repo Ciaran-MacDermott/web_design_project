@@ -1,27 +1,32 @@
 /* ============================================================
-   TOKENS & GLOBAL VARIABLES
+Ciaran MacDermott - Styles for Agroforestry NGO Site Nov/Dec 2025 ->small comment assistance with githuib copilot
+
+tried keeping this professional as using as portfolio at work-> got some advice off colleagues but also:
+https://penpot.app/blog/the-developers-guide-to-design-tokens-and-css-variables/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
+https://medium.com/design-bootcamp/design-tokens-variables-what-are-they-for-c61d7b880d5f
+https://learneleventyfromscratch.com/lesson/22.html
+https://blog.prototypr.io/css-variables-90cc4cdf41e9
+https://stackoverflow.com/questions/31673022/using-global-vars-to-include-css
+=============================================================== */
+
+/* ============================================================
+  GLOBAL VARIABLES
 =============================================================== */
 :root{
-  --bg-page: #78866B;              /* overall page background (muted green) */
+  --bg-page: #78866B;              /* overall page background (dark green) */
   --text: #333;
-  --shadow: 0 3px 12px rgba(0,0,0,.08);
-  --card-bg: #F0EBE4;              /* softened card background */
+  --shadow: 0 3px 12px rgba(0,0,0,.1);
+
+  --wave-fill: #F0EBE4;            /* outer frame + wave colour (earthy/beige) */
+  --card-bg: #FFFFFF;              /* inner card background (off-white/white) */
 
   --radius-pill: 999px;
   --hero-measure: 80ch;
   --section-y: clamp(2rem, 4vw, 4rem);
 
-  --wave-fill: var(--card-bg);     /* waves match card colour */
   --emerald: #276749;              /* primary green */
   --emerald-deep: #1f4f38;         /* darker green for navbar/footer */
-}
-
-/* Main card sections use card background */
-#hero,
-#main-content,
-#newsletter,
-#connect-section {
-  background: var(--card-bg);
 }
 
 /* ============================================================
@@ -39,8 +44,8 @@ body{
 #page-wrapper {
   max-width: 1500px;
   margin: 0 auto;
-  padding-inline: 1.25rem;
-  background: var(--bg-page);
+  padding: 0 0 1.5rem;             /* bottom space within wrapper */
+  background: var(--bg-page);      /* dark green behind frames */
   box-shadow: 0 3px 15px rgba(0,0,0,0.05);
 }
 
@@ -54,6 +59,18 @@ body{
   margin-bottom: 0.5rem;  /* or 0 if you want it really tight */
 }
 
+/* Frame + inner card structure */
+.framed-section {
+  background: var(--wave-fill);    /* same as wave colour */
+  padding: 1.5rem;                 /* thickness of frame */
+}
+
+.framed-inner {
+  background: var(--card-bg);      /* off-white / white inner card */
+  border-radius: 12px;
+  padding: var(--section-y) 1.5rem;
+}
+
 /* Containers: slightly tighter default gutters */
 .container,
 .container-sm,
@@ -65,7 +82,9 @@ body{
   padding-right: 0.85rem !important;
 }
 
-/* Simple helpers */
+/* ============================================================
+   GLOBAL UTILITIES
+ =============================================================== */  
 .soft-shadow{ box-shadow: var(--shadow); }
 .object-cover{ object-fit: cover; }
 
@@ -149,8 +168,7 @@ body{
 =============================================================== */
 #hero{
   text-align: center;
-  padding-block: var(--section-y);
-  /* background comes from #hero rule at top (card-bg) */
+  /* vertical padding now handled by .framed-inner */
 }
 
 /* Big logo above title */
@@ -197,11 +215,23 @@ body{
 }
 
 /* Hero image area */
+/* Hero image area */
 .hero-figure{
-  width: min(1100px, 96vw);
-  height: clamp(180px, 28vw, 420px);
+  width: 100%;
+  max-width: 1100px;        /* you can lower this if you want a narrower banner */
   margin-inline: auto;
+  aspect-ratio: 16 / 9;     /* nice wide banner shape */
+  overflow: hidden;         /* hide any overflow from the image */
 }
+
+/* Make sure the image fills the box nicely */
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* crop to maintain 16:9 without distortion */
+}
+
 
 /* ============================================================
    WAVY DIVIDERS
@@ -216,7 +246,7 @@ body{
   height: 50px;
 }
 .section-wave path{
-  fill: #F0EBE4;
+  fill: var(--wave-fill);          /* match outer frame colour */
   opacity: 1;
 }
 .wave-down{ margin-top: -2px; }
@@ -233,10 +263,7 @@ body{
 /* ============================================================
    MAIN CONTENT AREA
 =============================================================== */
-#main-content{
-  padding-block: var(--section-y);
-  /* background comes from top rule (card-bg) */
-}
+
 .content-box{
   max-width: min(1100px, 96vw);
   margin-inline: auto;
@@ -301,8 +328,6 @@ form .form-select:focus {
   border-radius: 8px;
 }
 
-
-
 /* Give the checkbox itself a clear border and bigger size */
 .form-check-input {
   width: 1.2rem;
@@ -339,18 +364,12 @@ form .form-select:focus {
 }
 
 
-/* ============================================================
-   NEWSLETTER SECTION
-=============================================================== */
-#newsletter{
-  /* background comes from card-bg rule */
-}
 
 /* ============================================================
    CONNECT SECTION
 =============================================================== */
 #connect-section{
-  /* background comes from card-bg rule */
+  /* background handled by framed-section */
   text-align: center;
 }
 
@@ -394,7 +413,7 @@ form .form-select:focus {
 }
 
 /* ============================================================
-   BUTTONS
+   BUTTONS bootstrap fx and keeping green theme colours
 =============================================================== */
 .btn-outline-emerald{
   border: 1px solid var(--emerald);
@@ -442,7 +461,7 @@ form .form-select:focus {
 }
 
 /* ============================================================
-   BACK TO TOP BUTTON (created by JS later)
+   BACK TO TOP BUTTON (stored in footer)
 =============================================================== */
 #backToTop {
   position: fixed;
@@ -454,22 +473,21 @@ form .form-select:focus {
   background: var(--emerald);
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,.35);
   display: none;
   z-index: 999;
 }
 #backToTop i {
   font-size: 1.1rem;
 }
-
 /* ============================================================
-   GENERIC POPUP (used for donation)
+  Signup/ donation popups
 =============================================================== */
 .signup-popup{
   position: fixed;
   inset: 0;                             /* top:0; right:0; bottom:0; left:0 */
   background: rgba(0,0,0,0.45);
-  display: none;                        /* IMPORTANT: hidden until JS shows it */
+  display: none;                        /* hidden until JS shows it */
   align-items: center;
   justify-content: center;
   z-index: 1050;
@@ -507,7 +525,7 @@ form .form-select:focus {
   color: #555;
 }
 
-/* Tree celebration animation */
+/* Tree celebration animation  https://www.youtube.com/watch?v=kgqMcFrT51o "The best way to enable css animations with Javascript"*/
 .signup-popup-icon.donate-icon{
   font-size: 3.2rem;
   margin-bottom: 0.5rem;
@@ -522,10 +540,10 @@ form .form-select:focus {
   100% { transform: scale(1) rotate(0deg); }
 }
 
+
 /* ============================================================
-   ACCESSIBILITY: Reduced Motion
+   ACCESSIBILITY: media queries for reduced motion
 =============================================================== */
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
 }
-
