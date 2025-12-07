@@ -1,3 +1,18 @@
+/* ===== HEADER  HOME ===== */
+#home-page .custom-navbar {
+    background-color: #b1e7c3 !important; 
+}
+
+#home-page .custom-navbar a {
+    color: #1c391d;
+    font-weight: 700; 
+    text-decoration: none;
+}
+
+#home-page .custom-navbar a:hover {
+    text-decoration: underline;
+}
+
 /* ===== GLOBAL ===== */
 * {
     margin: 0;
@@ -10,14 +25,13 @@ body {
     background: #ffffff;
     color: #1f3d22;
 }
-.btn {
-  text-decoration: none !important;
-}
 
+.btn {
+    text-decoration: none !important;
+}
 
 /* ===== NAVBAR ===== */
 .navbar {
-    background: #b1e7c3;
     padding: 18px 0;
 }
 
@@ -27,11 +41,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo .icon {
-    font-size: 1.4rem;
-    margin-right: 5px;
 }
 
 /* ===== NAV LINKS ===== */
@@ -241,6 +250,33 @@ body {
     margin: auto;
 }
 
+/* ===== IMPACT ===== */
+#home-page .impact-section .card,
+#home-page .benefits-section .benefit-card,
+#home-page .before-after-section .image-pair {
+    background: #e6f4e9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+}
+
+#home-page .impact-section .card h3,
+#home-page .benefits-section .benefit-card {
+    font-size: 1rem; 
+    font-weight: 600;
+    color: #1f3d22;
+}
+
+#home-page .help-section ul {
+    list-style: none; 
+    padding-left: 0;
+}
+
+#home-page .help-section ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
 /* ===== IMPACT SECTION ===== */
 .impact-section, .benefits-section, .help-section, .before-after-section, .counter-section {
     padding: 60px 0;
@@ -253,13 +289,6 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 30px;
-}
-
-.card, .benefit-card, .image-pair {
-    background: #e6f4e9;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
 }
 
 .before-after-images .image-pair img {
