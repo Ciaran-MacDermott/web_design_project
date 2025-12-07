@@ -1,22 +1,24 @@
-// * This script handles the Netflix-style scrolling and auto-slide *
+document.addEventListener('DOMContentLoaded', function() {
+    const donateBtn = document.getElementById('donateBtn');
+    const thankMessage = document.getElementById('thankMessage');
 
-$(document).ready(function () {
+    donateBtn.addEventListener('click', function() {
+        const name = document.getElementById('donorName').value.trim();
+        const email = document.getElementById('donorEmail').value.trim();
+        const amount = document.getElementById('donationAmount').value.trim();
 
-    // * Grab the carousel track (the scrollable row of images) *
-    const track = $(".carousel-track");
+        if (!name || !email || !amount || amount <= 0) {
+            alert("Please fill all fields correctly.");
+            return;
+        }
 
-    // * Move right when user clicks the next button *
-    $(".next").click(function () {
-        track.animate({ scrollLeft: track.scrollLeft() + 350 }, 400);
+        // Clear fields
+        document.getElementById('donorName').value = '';
+        document.getElementById('donorEmail').value = '';
+        document.getElementById('donationAmount').value = '';
+
+        // Show thank you message
+        thankMessage.style.display = 'block';
+        thankMessage.scrollIntoView({ behavior: 'smooth' });
     });
-
-    // * Move left when user clicks the prev button *
-    $(".prev").click(function () {
-        track.animate({ scrollLeft: track.scrollLeft() - 350 }, 400);
-    });
-
-    // * Automatic movement — yeah, like Netflix auto scroll *
-    setInterval(() => {
-        track.animate({ scrollLeft: track.scrollLeft() + 350 }, 600);
-    }, 3500); // * Every 3.5 seconds *
 });
